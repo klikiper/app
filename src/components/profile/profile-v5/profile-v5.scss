@@ -1,0 +1,39 @@
+profile-v5 {
+		.cover{
+			z-index: 1;
+			height: 200px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.wrapper-profile{
+			position: relative;
+			z-index: 10;
+		}
+		.wrapper-avt{
+			height: 95px;
+			width: 90px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				height: 100%;
+				min-width: 100%;
+				max-width: unset;
+			}
+		}
+		.wrapper-item{
+			height: 140px;
+			overflow: hidden;
+			img{
+				max-width: unset;
+				height: 100%;
+				min-width: 100%;
+			}
+		}
+}

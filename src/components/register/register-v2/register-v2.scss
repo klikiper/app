@@ -1,0 +1,45 @@
+register-v2 {
+	.signup-2{
+		height: 100%;
+	}
+	.decor{
+		z-index: 5;
+		position: absolute;
+		height: 400px;
+		width: 400px;
+		border-radius: 50%;
+		top: -170px;
+		right: -190px;
+	}
+	.decor-2{
+		z-index: 1;
+		position: absolute;
+		height: 150px;
+		width: 150px;
+		border-radius: 50%;
+		top: 90px;
+		right: 50px;
+	}
+	.logo-img{
+		display: inline-block;
+		img{
+			height: 30px;
+		}
+	}
+	.wrapper-page{
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	ion-slides{
+		flex: 1;
+		display: flex;
+		align-items: flex-end;
+		height: auto !important;
+	}
+}

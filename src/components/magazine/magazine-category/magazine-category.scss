@@ -1,0 +1,13 @@
+magazine-category {
+	.wrapper-categories{
+		height: 100px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h3{
+			bottom: 0px;
+			left: 15px;
+		}
+	}
+}

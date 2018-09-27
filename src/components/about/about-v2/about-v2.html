@@ -1,0 +1,89 @@
+<div class="black about-v2" *ngIf="data!=null">
+  <div class="top-banner">
+    <img class="ani-fade-out" src="../../assets/img/bg3.jpg" alt="">
+    <div class="slogan black-opct">
+      <span class="text-white stroke stroke-white stroke-3 pd-10 fs-24 fw-600 uppercase ani-top-to-bottom">{{data.label.txtContactUs}}</span>
+    </div>
+  </div>
+
+  <div padding class="find-us text-center mgt-40 ani-left-to-right">
+    <h4 class="fs-18 fw-600 text-orange text-center mgb-40">{{data.label.txtGetInTouch}}</h4>
+    <div class="mgb-40">
+      <ion-icon class="text-orange fs-24" name="ios-phone-portrait"></ion-icon>
+      <p class="text-orange fs-11 uppercase fw-600">{{data.label.txtPhone}}</p>
+      <p class="text-grey-2 mg-5 fs-13">{{data.phone1}}</p>
+      <p class="text-grey-2 mg-5 fs-13">{{data.phone2}}</p>
+    </div>
+    <div class="mgb-40">
+      <ion-icon class="text-orange fs-24" name="ios-pin-outline"></ion-icon>
+      <p class="text-orange fs-11 uppercase fw-600">{{data.label.txtAddress}}</p>
+      <p class="text-grey-2 mg-5 fs-13">{{data.address1}}</p>
+      <p class="text-grey-2 mg-5 fs-13">{{data.address2}}</p>
+    </div>
+    <div class="mgb-40">
+      <ion-icon class="text-orange fs-24" name="ios-mail-outline"></ion-icon>
+      <p class="text-orange fs-11 uppercase fw-600">{{data.label.txtEmail}}</p>
+      <p class="text-grey-2 mg-5 fs-13">{{data.email1}}</p>
+      <p class="text-grey-2 mg-5 fs-13">{{data.email2}}</p>
+    </div>
+  </div>
+
+  <div class="form-mess mgt-20 ani-bottom-to-top">
+    <div class="bg-pst">
+      <img src="assets/img/bg1.jpg">
+    </div>
+    <div padding class="black-opct-1 pdt-50 pdb-50 main-form">
+      <h4 class="fs-18 fw-600 text-white-2 text-center">{{data.label.txtSendAMessage}}</h4>
+      <p class="mgb-50 text-white-2 text-center fs-13">{{data.about}}</p>
+      <ion-list>
+          <ion-item class="text-white-2 white-opct">
+              <ion-input type="text" [(ngModel)]="fullname" placeholder="{{data.label.txtFullName}}"></ion-input>
+          </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item class="text-white-2 white-opct">
+              <ion-input type="email" [(ngModel)]="email" placeholder="{{data.label.txtEmail}}"></ion-input>
+          </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item class="text-white-2 white-opct">
+              <ion-textarea type="text" [(ngModel)]="message" placeholder="{{data.label.txtMessage}}"></ion-textarea>
+          </ion-item>
+      </ion-list>
+      <div class="text-center">
+        <button ion-button icon-left class="orange text-black mgt-10 bdra-0 fw-600 uppercase spacing-1 fs-12" (click)="onCallbackEvent('onSendMessage')">
+          {{data.label.txtSendMessage}}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div padding class="social mgt-40 mgb-30 text-black text-center ani-right-to-left">
+    <h6 class="text-orange">{{data.label.txtFollowWidth}}</h6>
+    <button ion-button only-icon small class="text-black orange">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+    <button ion-button only-icon small class="text-black orange">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </button>
+    <button ion-button only-icon small class="text-black orange">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </button>
+    <button ion-button only-icon small class="text-black orange">
+      <ion-icon name="logo-google"></ion-icon>
+    </button>
+    <button ion-button only-icon small class="text-black orange">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </button>
+  </div>
+
+  <div class="map ani-left-to-right">
+    <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(data.google_map)" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <div padding class="logo-brand text-center ani-bottom-to-top">
+    <img src="assets/img/chimera_w.png" alt="">
+    <p class="text-white-2 fs-12 pdl-20 pdr-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+</div>

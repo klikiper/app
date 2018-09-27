@@ -1,0 +1,31 @@
+
+<div class="success-signup white" padding>
+  
+  	<div class="wrapper-page">  
+	    <div col-10 class="main-form text-center mg-auto">
+	    	<div class="mgt-50">
+	    		<ion-icon class="text-green fs-100" name="md-checkmark-circle"></ion-icon>
+	    		<h5 class="fw-600 fs-25">Congratulation!</h5>
+	    		<p class="text-grey-3 fs-13">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+	    	</div>
+
+	    	<ion-list class="mgb-10 mgt-50">
+	          	<ion-label class="text-black fs-12 uppercase text-left mgb-10">Active Code</ion-label>
+	          	<ion-item class="fs-13 text-white round black-opct">
+	            	<ion-input type="password" placeholder="000000" [(ngModel)]="password"></ion-input>
+	          	</ion-item>
+	        </ion-list>
+
+	        <button ion-button block round color="dark" class="mgt-20 text-white uppercase spacing-1 shadow-3 pink-vs-red">
+	         	Strat Now
+	        </button>
+	    </div>
+  	</div>
+
+  	<ion-row class="wrapper-top-signup ani-right-to-left">
+    	<button ion-button outline icon-only color="dark" class="mg-auto mgt-30 text-grey-3 stroke-grey-3 stroke-1 button-circle back-page" (click)="dismiss()">
+      		<ion-icon name="ios-close"></ion-icon>
+    	</button>
+  	</ion-row>
+
+</div>

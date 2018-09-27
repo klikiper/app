@@ -1,0 +1,61 @@
+
+<div class="signup-3 white">
+  
+  <div class="bg-img">
+    <img [src]="data.imgBg" alt="">
+  </div>
+
+  <div class="wrapper-page text-center black-opct">
+
+    <div class="text-right">
+      <button ion-button outline icon-only small color="dark" class="mgt-20 mgr-15 text-white stroke-white stroke-1 button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+        <ion-icon name="ios-close"></ion-icon>
+      </button>
+    </div>
+    
+    <div col-10 class="main-form mg-auto mgt--30">
+      <ion-row class="ani-right-to-left">
+        <h3 class="fs-20 fw-600 text-white mgb-20 spacing-3 pull-left">{{data.txtHead}}</h3>
+      </ion-row>
+      <ion-row class="logo-img mgb-40 pull-left ani-right-to-left">
+        <img [src]="data.imgLogo" alt="">
+      </ion-row>
+
+      <div class="ani-bottom-to-top">
+        <ion-list class="mgb-10">
+          <ion-item class="fs-13 text-white white-opct round">
+            <ion-input type="text" placeholder="{{data.txtUserName}}" [(ngModel)]="username"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list class="mgb-10">
+          <ion-item class="fs-13 text-white white-opct round">
+            <ion-input type="text" placeholder="{{data.txtFullName}}" [(ngModel)]="fullname"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list class="mgb-10">
+          <ion-item class="fs-13 text-white white-opct round">
+            <ion-input type="text" placeholder="{{data.txtAddress}}" [(ngModel)]="address"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list class="mgb-10">
+          <ion-item class="fs-13 text-white white-opct round">
+            <ion-input type="text" placeholder="{{data.txtEmail}}" [(ngModel)]="email"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list class="mgb-10">
+          <ion-item class="fs-13 text-white white-opct round">
+            <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </div>
+      
+      <div class="text-center ani-bottom-to-top">
+        <button ion-button block round color="dark" class="mgt-30 text-white uppercase spacing-1 shadow-3 pink-vs-red" (click)="onCallbackEvent('onSignUp')">
+         {{data.btnSignUp}}
+        </button>
+      </div>
+    </div>
+
+    <button ion-button color="light" clear small class="mgb-20 btn-signup text-white ani-bottom-to-top" (click)="onCallbackEvent('onForgotPassword')">{{data.btnForgotPassword}}</button>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+
+<div class="">
+	<div padding class="top-gallery pdb-0">
+		<div class="white shadow-1 bdra-5 ovfl-hidden" (click)="onCallbackEvent('onClick',data[2], $event)">
+			<img src="{{data[2].path}}" alt="">
+
+			<div padding class="pdt-5 pdb-5">
+				<p class="fs-14 text-grey-4 mg-0">Explore new test functions.</p>
+				<button ion-button icon-left clear small class="mg-0 fs-12 text-grey-3">
+					<ion-icon class="" name="md-heart-outline"></ion-icon>
+					271
+				</button>
+				<button ion-button icon-left clear small class="mg-0 fs-10 text-grey-3">
+					<ion-icon class="" name="ios-chatbubbles-outline"></ion-icon>
+					130
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<h5 padding class="block pdb-0 mgt-5 fw-400">Feature Shots</h5>
+	
+	<ion-list class="lst-no-background">
+	    <ion-item *ngFor="let item of data" class="ani-right-to-left sahdow-2 bdra-5" (click)="onCallbackEvent('onClick',item, $event)">
+	      	<ion-thumbnail item-start class="bdra-5 ovfl-hidden">
+	        	<img src="{{item.path}}">
+	      	</ion-thumbnail>
+	      	<h2 class="text-ellipsis fs-14 text-grey-4" [innerHTML]="item.title"></h2>
+	      	<button ion-button icon-left clear small class="mg-0 fs-11 text-grey-3">
+				<ion-icon class="fs-16" name="md-heart-outline"></ion-icon>
+				271
+			</button>
+			<button ion-button icon-left clear small class="mg-0 fs-11 text-grey-3">
+				<ion-icon class="fs-16" name="ios-chatbubbles-outline"></ion-icon>
+				130
+			</button>
+	    </ion-item>
+	</ion-list>
+
+</div>

@@ -1,0 +1,311 @@
+
+<div class="banner ovfl-hidden">
+  <div class="bg-banner">
+    <img src="assets/img/foo9.jpg">
+  </div>
+  <h3 padding class="mg-0 fw-600 fs-25 pdb-0">Wait a minute. Wait a minute, Uhhh...</h3>
+</div>
+
+
+<div padding class="">
+  
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="bookmark" class="segment-btn-group text-grey-4">
+      <ion-segment-button class="fs-13 green-vs-yellow bdra-15 border-0 fw-400" value="recently">
+        Recently
+      </ion-segment-button>
+      <ion-segment-button class="fs-13 tim-vs-datroi bdra-15 border-0 fw-400" value="colections">
+        Colections
+      </ion-segment-button>
+      <ion-segment-button class="fs-13 lama-vs-coban bdra-15 border-0 fw-400" value="other">
+        Other
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+
+  <div [ngSwitch]="bookmark" class="mgt-30">
+    <div class="" *ngSwitchCase="'recently'">
+      <ion-list no-lines>
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo1.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo2.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo3.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+      </ion-list>
+
+      <div padding class="mgb-15 mgt-30">
+        <h3 class="fs-10 uppercase spacing-1">Few days ago</h3>
+        <div class="divider hong-vs-lanon"></div>
+      </div>
+
+      <ion-list no-lines>
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo10.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo8.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo9.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+
+         <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo13.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+
+        <ion-item class="pdb-10">
+          <ion-avatar item-start class="shadow-3 thumb-item ovfl-hidden circle">
+            <img src="assets/img/foo15.jpg">
+          </ion-avatar>
+          <h2 class="fs-14 fw-600 spacing-1">Lorem Ipsum</h2>
+          <p class="fs-11">This town ain't big enough for the two of us!</p>
+          <ion-note item-end class="fs-12 fw-600 text-grey-4">$22.22</ion-note>
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+    <ion-list no-lines *ngSwitchCase="'colections'">
+
+      <div class="pst-btn-create">
+        <button ion-button class="lama-vs-coban shadow-3">
+          <ion-icon class="pdb-0 fs-24" name="ios-add"></ion-icon>
+        </button>
+      </div>
+
+      <ion-item class="mgb-20">
+        <h2 class="fs-16 fw-600 spacing-1">Lorem Ipsum</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+
+        <ion-row class="mgt-15">
+          <ion-col col-6 no-padding>
+            <div class="main-thumb-view ovfl-hidden bdra-5 mg-5">
+              <img src="assets/img/foo1.jpg" alt="">
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            <div class="wrap-thumb">
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo2.jpg" alt="">
+              </div>
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo3.jpg" alt="">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            <div class="wrap-thumb">
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo4.jpg" alt="">
+              </div>
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo5.jpg" alt="">
+              </div>
+            </div>
+          </ion-col>
+
+          <div class="text-right full-width mgt-10">
+            <button ion-button small icon-only class="grey-3 button-circle">
+              <ion-icon name="ios-close"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="lama-vs-coban button-circle">
+              <ion-icon name="md-create"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="tim-vs-datroi button-circle">
+              <ion-icon name="ios-eye"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="cyan button-circle">
+              <ion-icon name="md-share"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="pink-vs-red button-circle">
+              <ion-icon name="ios-add"></ion-icon>
+            </button>
+          </div>
+        </ion-row>
+      </ion-item>
+
+
+
+      <ion-item class="mgb-20">
+        <h2 class="fs-16 fw-600 spacing-1">Lorem Ipsum</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+
+        <ion-row class="mgt-15">
+          <ion-col col-6 no-padding>
+            <div class="main-thumb-view ovfl-hidden bdra-5 mg-5">
+              <img src="assets/img/foo14.jpg" alt="">
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            <div class="wrap-thumb">
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo19.jpg" alt="">
+              </div>
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo15.jpg" alt="">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            <div class="wrap-thumb">
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo8.jpg" alt="">
+              </div>
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo18.jpg" alt="">
+              </div>
+            </div>
+          </ion-col>
+
+          <div class="text-right full-width mgt-10">
+            <button ion-button small icon-only class="grey-3 button-circle">
+              <ion-icon name="ios-close"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="lama-vs-coban button-circle">
+              <ion-icon name="md-create"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="tim-vs-datroi button-circle">
+              <ion-icon name="ios-eye"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="cyan button-circle">
+              <ion-icon name="md-share"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="pink-vs-red button-circle">
+              <ion-icon name="ios-add"></ion-icon>
+            </button>
+          </div>
+        </ion-row>
+      </ion-item>
+
+
+      <ion-item class="mgb-20">
+        <h2 class="fs-16 fw-600 spacing-1">Lorem Ipsum</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+
+        <ion-row class="mgt-15">
+          <ion-col col-6 no-padding>
+            <div class="main-thumb-view ovfl-hidden bdra-5 mg-5">
+              <img src="assets/img/foo13.jpg" alt="">
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            <div class="wrap-thumb">
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo18.jpg" alt="">
+              </div>
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo19.jpg" alt="">
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-3 no-padding>
+            <div class="wrap-thumb">
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo10.jpg" alt="">
+              </div>
+              <div class="thumb-view ovfl-hidden bdra-5 mg-5">
+                <img src="assets/img/foo9.jpg" alt="">
+              </div>
+            </div>
+          </ion-col>
+
+          <div class="text-right full-width mgt-10">
+            <button ion-button small icon-only class="grey-3 button-circle">
+              <ion-icon name="ios-close"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="lama-vs-coban button-circle">
+              <ion-icon name="md-create"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="tim-vs-datroi button-circle">
+              <ion-icon name="ios-eye"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="cyan button-circle">
+              <ion-icon name="md-share"></ion-icon>
+            </button>
+            <button ion-button small icon-only class="pink-vs-red button-circle">
+              <ion-icon name="ios-add"></ion-icon>
+            </button>
+          </div>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+
+    <ion-list no-lines *ngSwitchCase="'other'">
+      <ion-item>
+        <ion-thumbnail class="shadow-2 bdra-3 ovfl-hidden" item-start>
+          <img src="assets/img/foo10.jpg">
+        </ion-thumbnail>
+        <h2 class="spacing-1 fw-600 text-grey-5">Daffy</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail class="shadow-2 bdra-3 ovfl-hidden" item-start>
+          <img src="assets/img/foo15.jpg">
+        </ion-thumbnail>
+        <h2 class="spacing-1 fw-600 text-grey-5">Huey</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail class="shadow-2 bdra-3 ovfl-hidden" item-start>
+          <img src="assets/img/foo11.jpg">
+        </ion-thumbnail>
+        <h2 class="spacing-1 fw-600 text-grey-5">Dewey</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail class="shadow-2 bdra-3 ovfl-hidden" item-start>
+          <img src="assets/img/foo9.jpg">
+        </ion-thumbnail>
+        <h2 class="spacing-1 fw-600 text-grey-5">Louie</h2>
+        <p class="fs-11">This town ain't big enough for the two of us!</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+</div>

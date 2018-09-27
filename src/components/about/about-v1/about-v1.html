@@ -1,0 +1,81 @@
+<div class="white-1 about-v1" *ngIf="data!=null">
+	<div class="map ani-left-to-right">
+		<iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(data.google_map)" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+
+	<div padding class="ani-right-to-left">
+		<div class="find-us mgt-30">
+			<h4 class="fs-26 fw-600">{{data.label.txtGetInTouch}}</h4>
+			<p class="text-grey-4 mgb-40">{{data.about}}</p>
+			<div class="element-find text-grey-4 mgb-10">
+				<ion-icon class="mgl-10 mgr-20" name="md-pin"></ion-icon>
+				<p class="mgt-0">{{data.address1}}</p>
+			</div>
+			<div class="element-find text-grey-4 mgb-10">
+				<ion-icon class="mgl-10 mgr-20" name="md-call"></ion-icon>
+				<p class="mgt-0">{{data.phone1}}</p>
+			</div>
+			<div class="element-find text-grey-4 mgb-10">
+				<ion-icon class="mgl-10 mgr-20" name="md-mail"></ion-icon>
+				<p class="mgt-0">{{data.email1}}</p>
+			</div>
+			<div class="element-find text-grey-4 mgb-10">
+				<ion-icon class="mgl-10 mgr-20" name="md-time"></ion-icon>
+				<p class="mgt-0">
+					<span class="block mgb-5">{{data.open_time}}</span>
+					<span class="block mgb-5">{{data.close_time}}</span>
+				</p>
+			</div>
+		</div>
+			
+		<div class="social mgt-40 ani-fade-out">
+			<h6>{{data.label.txtFollow}}:</h6>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-facebook"></ion-icon>
+			</button>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-twitter"></ion-icon>
+			</button>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-instagram"></ion-icon>
+			</button>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-google"></ion-icon>
+			</button>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-pinterest"></ion-icon>
+			</button>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-linkedin"></ion-icon>
+			</button>
+			<button ion-button only-icon clear class="text-grey-4">
+				<ion-icon name="logo-dribbble"></ion-icon>
+			</button>
+		</div>
+
+		<div class="form-mess mgt-70 pdb-50 ani-bottom-to-top">
+			<h4 class="fs-26 fw-600">{{data.label.txtSendAMessage}}</h4>
+			<ion-list>
+			    <ion-item class="text-grey-5 grey-1 round">
+			      	<ion-input type="text" placeholder="{{data.label.txtFullName}}" [(ngModel)]="fullname"></ion-input>
+			    </ion-item>
+			</ion-list>
+			<ion-list>
+			    <ion-item class="text-grey-5 grey-1 round">
+			      	<ion-input type="email" placeholder="{{data.label.txtEmail}}" [(ngModel)]="email"></ion-input>
+			    </ion-item>
+			</ion-list>
+			<ion-list>
+			    <ion-item class="text-grey-5 grey-1 bdra-15">
+			      	<ion-textarea type="text" placeholder="{{data.label.txtMessage}}" [(ngModel)]="message"></ion-textarea>
+			    </ion-item>
+			</ion-list>
+			<div class="text-right">
+				<button ion-button round icon-left class="pink text-white mgt-10" (click)="onCallbackEvent('onSendMessage')">
+					<ion-icon class="text-pink" name="send"></ion-icon>
+					{{data.label.txtSend}}
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div *ngIf="data!=null">
+  <div class="wrapper-page text-center lama-vs-lama {{data.ani}}">
+    
+    <button ion-button icon-only small color="dark" class="text-white grey-2 back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="md-close"></ion-icon>
+    </button>
+    
+    <div class="mgt-0">
+      <ion-row class="logo-img mgb-70 ani-bottom-to-right">
+        <img class="mg-auto" [src]="data.imgLogo" alt="">
+      </ion-row>
+
+      <ion-list>
+        <ion-item class="text-grey-5 grey-1 bdra-20 ani-right-to-left">
+          <ion-input type="text" placeholder="{{data.txtUserName}}" [(ngModel)]="username"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+        <ion-item class="text-grey-5 grey-1 bdra-20 ani-right-to-left">
+          <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      
+      <button ion-button round block color="light" class="blue text-black mgt-25 fw-600 spacing-1 ani-right-to-left" (click)="onCallbackEvent('onLogin')" >{{data.btnLogin}}</button>  
+    </div>
+    
+    <button ion-button color="light" clear small class="btn-signup mgb-15 text-grey-4 ani-top-to-left" (click)="onCallbackEvent('onForgotPassword')">{{data.btnForgotPassword}}</button>
+  </div>
+  </div>

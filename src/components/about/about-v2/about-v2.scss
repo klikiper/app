@@ -1,0 +1,55 @@
+about-v2 {
+
+	.about-v2{
+		.top-banner{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-height: 300px;
+			overflow: hidden;
+			position: relative;
+			.slogan{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.form-mess{
+			position: relative;
+			.bg-pst{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				img{
+					height: 100%;
+					max-width: unset;
+					min-width: 100%;
+				}
+			}
+			.main-form{
+				position: relative;
+				z-index: 10;
+			}
+		}
+		.map{
+			filter: grayscale(100%) contrast(115%) brightness(80%);
+		}
+		.logo-brand{
+			img{
+				height: 35px;
+			}
+		}
+	}
+}

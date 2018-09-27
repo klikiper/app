@@ -1,0 +1,91 @@
+  <div padding *ngIf="data!=null">
+   <div class="top-avt row ani-right-to-left">
+		<div class="thumb-avt bdra-10 pd-0" col-3>
+		  	<img [src]="data.user.imgAvatar" alt="">
+		</div>
+		<div class="text-right mgt-20" col-9>
+			<button ion-button small round outline class="stroke stroke-black stroke-1 text-black pd-10"  (click)="onCallbackEvent('onFollowClick')">{{data.label.btnFollow}}</button>
+			<button ion-button small round class="text-white black pd-10" (click)="onCallbackEvent('onAddFriendClick')">{{data.label.btnAddFriend}}</button>	
+		</div>
+
+		<div class="mgt-15">
+			<h2 class="fs-24 fw-600 spacing-1 mgb-0">{{data.user.username}}</h2>
+			<p class="fs-12 mgt-5">{{data.user.job}}</p>
+		</div>
+	</div>
+
+	<ion-row class="ani-left-to-right">
+		<ion-col>
+			<p class="fw-600 fs-18 mgb-0">{{data.user.followerCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollower}}</p>
+		</ion-col>
+		<ion-col>
+			<p class="fw-600 fs-18 mgb-0">{{data.user.followingCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollowing}}</p>
+		</ion-col>
+		<ion-col>
+			<p class="fw-600 fs-18 mgb-0">{{data.user.postCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtPosted}}</p>
+		</ion-col>
+	</ion-row>
+
+	<ion-row class="wrapper-prd mgl--5 ani-bottom-to-top">
+		<ion-col col-3 *ngFor="let item of data.photos">
+			<div class="bdra-10 thumb-prd"><img [src]="item.path" alt=""></div>
+		</ion-col>
+	</ion-row>
+
+	<div class="social mgt-40 ani-right-to-left">
+		<h5 class="fs-14 uppercase">{{data.label.txtSocial}}</h5>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onFacebookIconClick')">
+			<ion-icon name="logo-facebook"></ion-icon>
+		</button>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onTwitterIconClick')">
+			<ion-icon name="logo-twitter"></ion-icon>
+		</button>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onInstagramIconClick')">
+			<ion-icon name="logo-instagram"></ion-icon>
+		</button>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onGoogleIconClick')">
+			<ion-icon name="logo-google"></ion-icon>
+		</button>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onPinterestIconClick')">
+			<ion-icon name="logo-pinterest"></ion-icon>
+		</button>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onDribbleIconClick')">
+			<ion-icon name="logo-dribbble"></ion-icon>
+		</button>
+
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onLinkedInIconClick')">
+			<ion-icon name="logo-linkedin"></ion-icon>
+		</button>
+	</div>
+
+	<ion-row class="mgt-30 ani-bottom-to-top">
+		<h5 class="mgb-0 fs-14 uppercase">{{data.label.txtAboutMe}}</h5>
+		<p class="mgt-10 text-grey-4">{{data.user.aboutMe}}</p>
+	</ion-row>
+
+	<ion-row class="mgt-30 mgb-40 ani-right-to-left">
+		<h5 class="mgb-0 fs-14 uppercase">{{data.label.txtContactMe}}</h5>
+		<p class="mgb-0 text-grey-4">
+			<ion-icon class="mgr-10" name="ios-pin"></ion-icon>
+			{{data.user.address}}
+		</p>
+		<p class="mgb-0 text-grey-4">
+			<ion-icon class="mgr-10" name="md-mail"></ion-icon>
+		    {{data.user.mail}}
+		</p>
+		<p class="mgb-0 text-grey-4">
+			<ion-icon class="mgr-10" name="ios-phone-portrait"></ion-icon>
+			{{data.user.phone}}
+		</p>
+	</ion-row>
+	</div>
+

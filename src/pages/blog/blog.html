@@ -1,0 +1,20 @@
+<!--
+  Generated template for the BlogPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>blog</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <blog-basic *ngIf="page.name==1" [data]="data" [events]="events"></blog-basic>
+    <blog-timeline *ngIf="page.name==2" [data]="data" [events]="events"></blog-timeline>
+    <blog-post-detail *ngIf="page.name==3" [data]="data" [events]="events"></blog-post-detail>
+</ion-content>

@@ -1,0 +1,94 @@
+<div *ngIf="data!=null">
+<div class="bg-img">
+    <img [src]="data.imgBg" alt="">
+  </div>
+  
+  <div padding class="wrapper-page text-center black-opct-1 block {{data.ani}}">
+    
+    <button ion-button icon-only small color="dark" class="text-grey-3 white-opct button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="ios-close"></ion-icon>
+    </button>
+    
+    <div class="wrapper-flex" padding>
+      <ion-row class="logo-img mgb-50 mgt-50 ani-top-to-bottom">
+        <img class="mg-auto" [src]="data.imgLogo" alt="">
+        <p class="text-grey-3 mgt-0 pdl-15 pdr-15">{{data.txtHead}}</p>
+      </ion-row>
+
+      <div class="wrapper-slide">
+        <div class="full-width">
+          <ion-toolbar no-border-top class="mgb-30 ani-fade-out">
+            <ion-segment [(ngModel)]="type" class="segment-line-deviation text-white stroke-red">
+              <ion-segment-button value="signin" class="fs-18 fw-300 spacing-1">
+                {{data.btnSegmentLogin}}
+              </ion-segment-button>
+              <ion-segment-button value="signup" class="fs-18 fw-300 spacing-1">
+                {{data.btnSegmentSignUp}}
+              </ion-segment-button>
+            </ion-segment>
+          </ion-toolbar>
+
+
+          <div [ngSwitch]="type" class="ani-bottom-to-top">
+            <ion-list *ngSwitchCase="'signin'" class="mgb-0">
+              <div>
+                <ion-list class="mgb-5">
+                  <ion-item class="text-white line-1 stroke-white pdl-0">
+                    <ion-input type="email" placeholder="{{data.txtEmail}}" [(ngModel)]="email"></ion-input>
+                  </ion-item>
+                </ion-list>
+                <ion-list>
+                  <ion-item class="text-white line-1 stroke-white pdl-0">
+                    <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+                  </ion-item>
+                </ion-list>
+            
+                <button ion-button round color="light" class="white-opct text-white uppercase fw-600 spacing-1 mgt-20 fs-12" (click)="onCallbackEvent('onLogin')">{{data.btnLogin}}</button>
+                <button ion-button color="light" clear block small class="mgb-10 mgt-35 pull-right text-grey-3" (click)="onCallbackEvent('onForgotPassword')">{{data.btnForgotPassword}}</button>
+              </div>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'signup'" class="mgb-0">
+              <div>
+                <ion-list class="mgb-0">
+                  <ion-item class="text-grey-3 line-1 stroke-grey-3 pdl-0">
+                    <ion-input type="email" placeholder="{{data.txtEmail}}" [(ngModel)]="signUpEmail"></ion-input>
+                  </ion-item>
+                </ion-list>
+                <ion-list class="mgb-0">
+                  <ion-item class="text-grey-3 line-1 stroke-grey-3 pdl-0">
+                    <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="signUpPassword"></ion-input>
+                  </ion-item>
+                </ion-list>
+                <ion-list>
+                  <ion-item class="text-grey-3 line-1 stroke-grey-3 pdl-0">
+                    <ion-input type="password" placeholder="{{data.txtConfirmPassword}}" [(ngModel)]="confirmPassword"></ion-input>
+                  </ion-item>
+                </ion-list>
+            
+                <button ion-button round color="light" class="white-opct text-white uppercase fw-600 spacing-1 mgt-20 fs-12" (click)="onCallbackEvent('onSignUp')">{{data.btnSignUp}}</button>
+
+                <ion-row class="block text-center mgt-30">
+                  <button ion-button icon-only clear small color="light" class="text-white pdl-5 pdr-5 fs-14" (click)="onCallbackEvent('onFacebookIconClick')">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                  <button ion-button icon-only clear small color="light" class="text-white pdl-5 pdr-5 fs-14" (click)="onCallbackEvent('onTwitterIconClick')">
+                    <ion-icon name="logo-twitter">
+                    </ion-icon>
+                  </button>
+                  <button ion-button icon-only clear small color="light" class="text-white pdl-5 pdr-5 fs-14" (click)="onCallbackEvent('onGoogleIconClick')">
+                    <ion-icon name="logo-google"></ion-icon>
+                  </button>
+                  <button ion-button icon-only clear small color="light" class="text-white pdl-5 pdr-5 fs-14" (click)="onCallbackEvent('onLinkedInIconClick')">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </button>
+                </ion-row>
+              </div>
+            </ion-list>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

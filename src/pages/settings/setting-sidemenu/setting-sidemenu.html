@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sidemenu setting</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <button ion-button block round class="lama-vs-coban" (click)="open_menu('menu-basic')">Side Menu Basic</button>
+  <button ion-button block round class="indigo" (click)="open_menu('menu-avatar')">Side Menu Avatar</button>
+  <button ion-button block round class="pink" (click)="open_menu('menu-material')">Side Menu Material</button>
+  <button ion-button block round class="d-purple" (click)="open_menu('menu-icon-only')">Side Menu Only Icon</button>
+
+</ion-content>

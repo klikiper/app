@@ -1,0 +1,48 @@
+<div *ngIf="data!=null">
+  <div class="bg-img">
+    <img [src]="data.imgBg" alt="">
+  </div>
+  
+  <div class="wrapper-page text-center black-opct block {{data.ani}}">
+    <button ion-button icon-only small color="dark" class="text-white white-opct button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="ios-close"></ion-icon>
+    </button>
+    
+    <div>
+      <ion-row class="logo-img mgb-20 mgt-30 pdt-50 ani-left-to-right">
+        <img class="mg-auto" [src]="data.imgLogo" alt="">
+      </ion-row>
+      
+      <ion-slides #signupSlider class="ani-bottom-to-top">
+        <ion-slide class="text-white" padding>
+          <h4 class="text-left uppercase spacing-1 fw-400">{{data.txtHead1}}</h4>
+          <p class="text-left fs-14 text-grey-2">{{data.txtHead2}}</p>
+          <button ion-button color="light" clear small class="pull-left mgb-30 text-grey-3" (click)="onCallbackEvent('onSignUp')">{{data.btnSignUp}}</button>
+          <ion-list class="mgt-40">
+            <ion-item class="text-grey-5 white round">
+              <ion-input type="email" placeholder="{{data.txtEmail}}" [(ngModel)]="email"></ion-input>
+            </ion-item>
+          </ion-list>
+          <button ion-button outline (click)="next()" color="light" class="mgt-40 text-amber stroke-2 stroke-amber button-circle uppercase fw-600 spacing-1 fs-14">
+            <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+          </button>
+        </ion-slide>
+
+        <ion-slide class="text-white" padding>
+          <h4 class="text-left uppercase spacing-1 fw-400">{{data.txtHead3}}</h4>
+          <p class="text-left fs-14 text-grey-2">{{data.txtHead4}}</p>
+          <button ion-button color="light" clear small class="pull-left mgb-30 text-grey-3" (click)="onCallbackEvent('onForgotPassword')">{{data.btnForgotPassword}}</button>
+          <ion-list class="mgt-40">
+            <ion-item class="text-grey-5 white round">
+              <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </ion-list>
+          <button ion-button round outline color="light" class="text-amber stroke-2 stroke-amber pull-right uppercase fw-600 spacing-1 fs-12"  (click)="onCallbackEvent('onLogin')">{{data.btnLogin}}</button>
+          <button ion-button outline (click)="prev()" color="light" class="mgr-5 text-amber stroke-2 stroke-amber button-circle pull-right uppercase fw-600 spacing-1 fs-14">
+            <ion-icon name="ios-arrow-back-outline"></ion-icon>
+          </button>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+  </div>

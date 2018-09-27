@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar class="pd-0 lama-vs-coban">
+    <button ion-button menuToggle class="text-white">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar class="dark-searchbar round transparent text-white" padding></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="white-1">
+	<chat-list-online [data]="data" [events]="events"></chat-list-online>
+</ion-content>

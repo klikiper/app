@@ -1,0 +1,78 @@
+<div *ngIf="data!=null">
+	<div class="cover-blur">
+		<div class="wrapper-cover">
+			<img [src]="data.user.imgAvatar" alt="">
+		</div>
+
+		<div class="info-pst pdt-40">		
+			<h3 class="text-white spacing-1 mgt-5 text-center ani-bottom-to-top">{{data.user.username}}</h3>
+			<div class="wrapper-avt mg-auto shadow-3 ani-bottom-to-top">
+				<img [src]="data.user.imgAvatar" alt="">
+			</div>
+			<p class="text-white pdl-30 pdr-30 text-center ani-bottom-to-top">{{data.user.quote}}</p>
+			<div class="text-center ani-bottom-to-top">
+				<button ion-button round small class="white text-grey-5" (click)="onCallbackEvent('onFollowClick')">{{data.label.btnFollow}}</button>
+				<button ion-button round small class="white text-grey-5" (click)="onCallbackEvent('onSendMessageClick')">{{data.label.btnMessage}}</button>
+			</div>
+
+			<ion-row class="pdl-15 pdr-15 mgt-20 ani-bottom-to-top">
+			<div class="local" col-6>
+				<p class="text-white"><ion-icon name="ios-pin-outline" class="mgr-5"></ion-icon>{{data.user.address}}</p>
+			</div>
+			<div class="social text-right" col-6>
+				<button ion-button icon-only outline class="button-circle stroke-white stroke-1 text-white" (click)="onCallbackEvent('onFacebookIconClick')">
+					<ion-icon class="fs-20" name="logo-facebook"></ion-icon>
+				</button>
+				<button ion-button icon-only outline class="button-circle stroke-white stroke-1 text-white" (click)="onCallbackEvent('onTwitterIconClick')">
+					<ion-icon class="fs-20" name="logo-twitter"></ion-icon>
+				</button>
+				<button ion-button icon-only outline class="button-circle stroke-white stroke-1 text-white" (click)="onCallbackEvent('onInstagramIconClick')">
+					<ion-icon class="fs-20" name="logo-instagram"></ion-icon>
+				</button>
+			</div>
+		</ion-row>
+
+		<ion-row class="mgt-10 pdl-15 pdr-15 spacing-1 black-opct ani-bottom-to-top">
+		<ion-col class="text-white text-center">
+		<p class="fw-100 fs-30 mgb-0 mgt-15">{{data.user.likeCount}}</p>
+		<p class="fs-13 text-white mgt-0">{{data.label.txtLikes}}</p>
+	</ion-col>
+	<ion-col class="text-white text-center">
+	<p class="fw-100 fs-30 mgb-0 mgt-15">{{data.user.followerCount}}</p>
+	<p class="fs-13 text-white mgt-0">{{data.label.txtFollower}}</p>
+</ion-col>
+<ion-col class="text-white text-center">
+<p class="fw-100 fs-30 mgb-0 mgt-15">{{data.user.followingCount}}</p>
+<p class="fs-13 text-white mgt-0">{{data.label.txtFollowing}}</p>
+</ion-col>
+</ion-row>
+</div>
+</div>
+
+
+<ion-toolbar no-border-top class="mgt-20 ani-top-to-bottom">
+<ion-segment [(ngModel)]="show_prd" class="segment-btn-group text-black stroke-black stroke-1 bdra-15">
+<ion-segment-button class="fs-14 black" value="posted">73 {{data.label.txtPosted}}</ion-segment-button>
+<ion-segment-button class="fs-14 black" value="pins">320 {{data.label.txtPins}}</ion-segment-button>
+</ion-segment>
+</ion-toolbar>
+
+
+<div [ngSwitch]="show_prd" class="mgt-10 ani-right-to-left">
+	<div *ngSwitchCase="'posted'">
+		<ion-row class="wrapper-prd">
+		  <ion-col col-3 *ngFor="let item of data.photos">
+		   <div class=" thumb-prd"><img [src]="item.path" alt=""></div>
+	    </ion-col>
+       </ion-row>
+</div>
+
+<div *ngSwitchCase="'pins'">
+	<ion-row class="wrapper-prd">
+	  <ion-col col-3 *ngFor="let item of data.pins">
+	    <div class="thumb-prd"><img [src]="item.path" alt=""></div>
+      </ion-col>
+    </ion-row>
+</div>
+</div>
+</div>

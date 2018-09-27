@@ -1,0 +1,667 @@
+
+
+<div class="white-1">
+  
+  <ion-toolbar no-border-top class="ani-top-to-bottom">
+    <ion-segment [(ngModel)]="newfeed" class="segment-btn-group text-black stroke-black stroke-2 bdra-5">
+      <ion-segment-button class="fs-13 black" value="from_you">
+        {{data.txtFromYou}}
+      </ion-segment-button>
+      <ion-segment-button class="fs-13 black" value="from_day">
+        {{data.txtFromDay}}
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch]="newfeed" class="ani-bottom-to-top">
+    <ion-card *ngSwitchCase="'from_you'" class="bdra-5 pdt-30">
+      
+      <ion-card-title class="uppercase fw-600 mgb-20 ani-bottom-to-top" padding>Nov 29, 2017</ion-card-title>
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>8:00 </b><b>am</b></div>
+        <div class="line-time text-pink text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-pink">Nov 27, 2017</p>
+
+          <h3 class="fs-16 fw-600 mgb-10">Folly words widow one downs few age every seven.</h3>
+
+          <ion-list class="lst-no-background">
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/img/avt1.jpg">
+              </ion-avatar>
+              <h2>Woody</h2>
+              <p>This town ain't big enough for the two of us!</p>
+            </ion-item>
+          </ion-list>
+          <button ion-button round small icon-left outline class="">Call</button>
+          <button ion-button round small icon-left outline class="">SMS</button>
+        </div>
+      </ion-row>
+
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>9:00 </b><b>pm</b></div>
+        <div class="line-time text-indigo text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-indigo">Nov 23, 2017</p>
+
+          <h3 class="fs-16 fw-600 mgt-0 mgb-10">Nine Inch Nails Live</h3>
+          <img src="assets/img/bg6.jpg">
+          <p class="text-grey-4 mgt-10">Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+        </div>
+      </ion-row>
+
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>11:35 </b><b>am</b></div>
+        <div class="line-time text-green text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-green">Nov 21, 2017</p>
+
+          <img src="assets/img/bg17.jpg"/>
+        
+          <h3 class="fs-16 fw-600 mgt-10">Nine Inch Nails Live. Are you telling me that you built a time machine...</h3>
+          <p class="text-grey-4 mgt-10">The most popular industrial group ever, and largelyresponsible for bringing the music to a mass audience.</p>
+
+          <ion-row>
+            <ion-col col-4 text-left>
+              <button ion-button icon-left clear small class="text-black pdl-0">
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>120</div>
+              </button>
+            </ion-col>
+            <ion-col col-4 center text-center>
+              <button ion-button icon-left clear small class="text-black">
+                <ion-icon name="text"></ion-icon>
+                <div>40</div>
+              </button>
+            </ion-col>
+            <ion-col col-4 right text-right>
+              <button ion-button icon-left clear small class="text-black fs-20">
+                <ion-icon name="ios-more"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-row>
+
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>5:00 </b><b>pm</b></div>
+        <div class="line-time text-blue text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-blue">Nov 19, 2017</p>
+
+          <span class="text-white-1 inline-block indigo fs-11 bdra-5 pd-5 uppercase">
+            <ion-icon name="quote" class="fs-20 mgr-5"></ion-icon>quote
+          </span>
+
+          <h3 class="fs-22 mgt-20 fw-600">Etiam rutrum iaculis nisi, eu faucibus arcu malesuada eu.</h3>
+
+          <ion-row>
+              <ion-col col-3>
+                <button ion-button icon-left clear small class="pdl-0">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>120</div>
+                </button>
+              </ion-col>
+              <ion-col col-3>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div>40</div>
+                </button>
+              </ion-col>
+          </ion-row>
+
+          <ion-item class="mgt-30 transparent pdb-15 pdl-0">
+              <ion-avatar item-start class="mgt-6 mgb-6">
+                <img src="assets/img/avt1.jpg">
+              </ion-avatar>
+              <h2 class="fs-14">Marty McFly</h2>
+              <p class="fs-10 text-grey-3">November 5, 1955</p>
+          </ion-item>
+        </div>
+      </ion-row>
+
+
+      
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>9:15 </b><b>am</b></div>
+        <div class="line-time text-teal text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-teal">Nov 17, 2017</p>
+
+          <img src="assets/img/bg20.jpg"/>
+        
+          <p class="mgt-10">Travel</p>
+          <h3 class="fs-18 mgb-15">Largelyresponsible for bringing the music to a mass audience.</h3>
+
+          <ion-list>
+            <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="assets/img/demo1.jpg">
+                </ion-thumbnail>
+                <h2>My Neighbor Totoro</h2>
+                <p>Hayao Miyazaki • 1988</p>
+                <button ion-button clear item-end>View</button>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="assets/img/demo2.jpg">
+                </ion-thumbnail>
+                <h2>Raiders of the Lost Ark</h2>
+                <p>Steven Spielberg • 1981</p>
+                <button ion-button clear item-end>View</button>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="assets/img/demo3.jpg">
+                </ion-thumbnail>
+                <h2>Ghostbusters</h2>
+                <p>Ivan Reitman • 1984</p>
+                <button ion-button clear item-end>View</button>
+            </ion-item>
+          </ion-list>
+        
+          <ion-row>
+            <button ion-button block clear round small class="text-pink stroke-pink uppercase">More</button>
+          </ion-row>
+        </div>
+      </ion-row>
+      
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>3:00 </b><b>pm</b></div>
+        <div class="line-time text-lime text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-lime">Nov 07, 2017</p>
+
+          <ion-item class="no-background pdl-0">
+            <ion-avatar item-start class="mgt-6 mgb-6">
+              <img src="assets/img/avt2.jpg">
+            </ion-avatar>
+            <h2 class="fs-14">Marty McFly</h2>
+            <p class="fs-10 text-grey-4">November 5, 1955</p>
+          </ion-item>
+
+          <img src="assets/img/bg14.jpg"/>
+        
+          <h3 class="fs-18 mgt-10">Largelyresponsible for bringing the music to a mass audience.</h3>
+        </div>
+      </ion-row>
+
+
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>7:50 </b><b>am</b></div>
+        <div class="line-time text-green text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-green">Nov 05, 2017</p>
+
+          <div class="pd-30 lama-vs-coban text-center">
+            <h3 class="fs-18 fw-600 text-white spacing-1 mgb-15">Largelyresponsible for bringing the music to a mass audience.</h3>
+            <p class="text-white fs-13">The most popular industrial group ever, and largelyresponsible for bringing the music to a mass audience.</p>
+            <button ion-button outline small round class="text-white stroke-1 stroke-white uppercase spacing-1 mgt-20">Read more</button>
+          </div>
+        </div>
+      </ion-row>
+
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>6:09 </b><b>am</b></div>
+        <div class="line-time text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600">Nov 03, 2017</p>
+          
+          <div class="card-bg-pst text-right">
+            <img src="assets/img/bg4.jpg"/>
+            <div class="wrapper-pst pull-right pd-15">
+              <h3 class="text-white fs-15 spacing-1 pdl-20">Nam maximus molestie mi.</h3>
+              <p class="card-subtitle fs-12 text-grey-2 pdl-20">Phasellus rutrum iaculis arcu, at sodales mattis vel.</p>
+            </div>
+          </div>
+        </div>
+      </ion-row>
+
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>10:55 </b><b>am</b></div>
+        <div class="line-time text-d-orange text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-d-orange">Nov 01, 2017</p>
+
+          <div>
+            <h3 class="fs-18 mgb-10 mgt-30">Largelyresponsible for bringing the music to a mass audience.</h3>
+            <ion-list class="lst-no-background">
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avt1.jpg">
+                </ion-avatar>
+                <h2 class="fw-600 fs-13">Woody</h2>
+                <p>Coder</p>
+              </ion-item>
+            </ion-list>
+            <div class="divider white-2"></div>
+          </div>
+
+          <div>
+            <h3 class="fs-18 mgb-10 mgt-30">Largelyresponsible for bringing the music to a mass audience.</h3>
+            <ion-list class="lst-no-background">
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avt2.jpg">
+                </ion-avatar>
+                <h2 class="fw-600 fs-13">Buzz Lightyear</h2>
+                <p>Designer</p>
+              </ion-item>
+            </ion-list>
+            <div class="divider white-2"></div>
+          </div>
+
+          <div>
+            <h3 class="fs-18 mgb-10 mgt-30">Largelyresponsible for bringing the music to a mass audience.</h3>
+            <ion-list class="lst-no-background">
+                <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/avt3.jpg">
+                    </ion-avatar>
+                    <h2 class="fw-600 fs-13">Jessie</h2>
+                    <p>Developer</p>
+                </ion-item>
+            </ion-list>
+          </div>
+
+          <div class="text-center">
+            <button ion-button round class="text-pink grey-1 uppercase mgb-15 fs-13">All Comment</button>
+          </div>
+        </div>
+      </ion-row>
+
+
+      <ion-row class="wrapper-item-line ani-bottom-to-top">
+        <div class="left-time text-right" col-2><b>3:02 </b><b>pm</b></div>
+        <div class="line-time text-grey-5 text-center" col-1>
+          <ion-icon name="md-radio-button-off"></ion-icon>
+          <span class="inline-block"></span>
+        </div>
+        <div class="right-content mgb-30" col-9>
+          <p class="uppercase fs-13 mgb-15 spacing-1 fw-600 text-grey-5">Oct 29, 2017</p>
+          
+          <div class="black" padding>
+            <h3 class="fs-18 fw-600 text-white spacing-1 mgb-15">Nine Inch Nails Live. Are you telling me that you built a time machine...</h3>
+            <img src="assets/img/bg15.jpg"/>
+            <p class="text-white mgt-15">The most popular industrial group ever, and largelyresponsible for bringing the music to a mass audience.</p>
+
+            <ion-row>
+              <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-white-2 pdl-0">
+                      <ion-icon name="thumbs-up"></ion-icon>
+                      <div>120</div>
+                  </button>
+              </ion-col>
+              <ion-col col-4 center text-center>
+                  <button ion-button icon-left clear small class="text-white-2">
+                      <ion-icon name="text"></ion-icon>
+                      <div>40</div>
+                  </button>
+              </ion-col>
+              <ion-col col-4 right text-right>
+                <button ion-button icon-left clear small class="text-white-2 fs-20">
+                    <ion-icon name="ios-more"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </ion-row>
+
+    </ion-card>
+
+
+
+
+
+
+
+
+
+
+    <div *ngSwitchCase="'from_day'" class="">
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-pink ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-pink text-pink">29</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">11:05 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-list class="lst-no-background">
+              <ion-item class="pdl-0">
+                <ion-avatar item-start>
+                  <img src="assets/img/avt1.jpg">
+                </ion-avatar>
+                <h2 class="fs-13 fw-600">Woody</h2>
+                <p class="fs-12">Designer</p>
+              </ion-item>
+            </ion-list>
+            <h3 class="fs-16 fw-600 mgb-10">Folly words widow one downs few age every seven.</h3>
+            <button ion-button round small icon-left outline class="">Call</button>
+            <button ion-button round small icon-left outline class="">SMS</button>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-d-purple ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-d-purple text-d-purple">27</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">9:01 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-14 fw-600">Nine Inch Nails Live</ion-card-title>
+            <p class="fs-12">The most popular industrial group ever, and largelyresponsible.</p>
+
+            <ion-row>
+                <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-black pdl-0">
+                      <ion-icon name="thumbs-up"></ion-icon>
+                      <div>120</div>
+                  </button>
+                </ion-col>
+                <ion-col col-4 center text-center>
+                  <button ion-button icon-left clear small class="text-black">
+                      <ion-icon name="text"></ion-icon>
+                      <div>40</div>
+                  </button>
+                </ion-col>
+                <ion-col col-4 right text-right>
+                  <button ion-button icon-left clear small class="text-black fs-20">
+                      <ion-icon name="ios-more"></ion-icon>
+                  </button>
+                </ion-col>
+            </ion-row>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-indigo ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-indigo text-indigo">25</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">6:30 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <span class="text-white-2 inline-block mgt-10 indigo fs-11 bdra-5 pd-5 uppercase">
+              <ion-icon name="quote" class="fs-20 mgr-5"></ion-icon>quote
+            </span>
+            <ion-card-title class="fs-22 fw-600">Etiam rutrum iaculis nisi, eu faucibus arcu malesuada eu.</ion-card-title>
+
+            <ion-row>
+                <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-grey-3 pdl-0">
+                      <ion-icon name="thumbs-up"></ion-icon>
+                      <div>120</div>
+                  </button>
+                </ion-col>
+                <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-grey-3">
+                      <ion-icon name="text"></ion-icon>
+                      <div>40</div>
+                  </button>
+                </ion-col>
+            </ion-row>
+
+            <ion-item class="mgt-30 transparent pdb-10">
+                <ion-avatar item-start class="mgt-6 mgb-6">
+                  <img src="assets/img/avt1.jpg">
+                </ion-avatar>
+                <h2 class="fs-14">Marty McFly</h2>
+                <p class="fs-10 text-grey-3">November 5, 1955</p>
+            </ion-item>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-teal ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-teal text-teal">23</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">2:20 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <img src="assets/img/bg20.jpg"/>
+          
+            <p class="mgt-5">Travel</p>
+            <ion-card-title class="fs-18">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+
+            <ion-list>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="assets/img/demo1.jpg">
+                  </ion-thumbnail>
+                  <h2>My Neighbor Totoro</h2>
+                  <p>Hayao Miyazaki • 1988</p>
+              </ion-item>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="assets/img/demo2.jpg">
+                  </ion-thumbnail>
+                  <h2>Raiders of the Lost Ark</h2>
+                  <p>Steven Spielberg • 1981</p>
+              </ion-item>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="assets/img/demo3.jpg">
+                  </ion-thumbnail>
+                  <h2>Ghostbusters</h2>
+                  <p>Ivan Reitman • 1984</p>
+              </ion-item>
+            </ion-list>
+          
+            <ion-row>
+              <button ion-button block clear round small class="text-pink stroke-pink uppercase">More</button>
+            </ion-row>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-pink ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-pink text-pink">21</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">8:25 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-18 fw-600">Nine Inch Nails Live</ion-card-title>
+            <p class="mgb-20">The most popular industrial group ever, and largelyresponsible.</p>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-green ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-green text-green">19</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">7:09 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-22 fw-600 spacing-1">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+            <p class="">The most popular industrial group ever, and largelyresponsible for bringing the music to a mass audience.</p>
+            <button ion-button outline small round class="text-green stroke-1 stroke-green uppercase spacing-1 mgt-20 mgb-10">Read more</button>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-black ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-black text-black">9</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">1:33 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <img src="assets/img/bg4.jpg"/>
+            <ion-card-title class="fs-18 spacing-1">Nam maximus molestie mi.</ion-card-title>
+            <p class="card-subtitle text-grey-3">Phasellus rutrum iaculis arcu, at sodales tellus mattis vel.</p>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-blue ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-blue text-blue">5</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">9:50 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-content>
+              <ion-card-title class="fs-18">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+              <ion-list class="lst-no-background">
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avt1.jpg">
+                  </ion-avatar>
+                  <h2 class="fw-600 fs-13">Woody</h2>
+                  <p>Coder</p>
+                </ion-item>
+              </ion-list>
+              <div class="divider white-2"></div>
+            </ion-card-content>
+        
+
+            <ion-card-content>
+              <ion-card-title class="fs-18">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+              <ion-list class="lst-no-background">
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avt2.jpg">
+                  </ion-avatar>
+                  <h2 class="fw-600 fs-13">Buzz Lightyear</h2>
+                  <p>Designer</p>
+                </ion-item>
+              </ion-list>
+              <div class="divider white-2"></div>
+            </ion-card-content>
+
+            <ion-card-content>
+              <ion-card-title class="fs-18">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+              <ion-list class="lst-no-background">
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avt3.jpg">
+                  </ion-avatar>
+                  <h2 class="fw-600 fs-13">Jessie</h2>
+                  <p>Developer</p>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+            
+            <div class="block text-center">
+              <button ion-button round class="text-pink grey-1 uppercase mgb-15 fs-13 mg-auto">All Comment</button>
+            </div>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+
+      <ion-card class="bdra-5 stroke-left stroke-2 stroke-d-orange ani-bottom-to-top">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-grey-1 pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-d-orange text-d-orange">3</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12">5:03 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-18 fw-600 spacing-1">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+            <p class="mgb-15">The most popular industrial group ever, and largelyresponsible.</p>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+    </div>
+  </div>
+</div>

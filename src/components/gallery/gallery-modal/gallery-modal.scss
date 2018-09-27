@@ -1,0 +1,19 @@
+gallery-modal {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.view-img-detail{
+		position: relative;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+		button{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}

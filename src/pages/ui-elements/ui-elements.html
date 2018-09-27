@@ -1,0 +1,101 @@
+<ion-header *ngIf="page.name!=14">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ui Elements</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content *ngIf="page.name==1" class="lama-vs-coban">
+	<actionsheets [data]="data" [events]="events"></actionsheets>
+</ion-content>
+
+<ion-content *ngIf="page.name==2">
+	<alerts [data]="data" [events]="events"></alerts>
+</ion-content>
+
+<ion-content *ngIf="page.name==3">
+	<badges [data]="data" [events]="events"></badges>
+</ion-content>
+
+<ion-content *ngIf="page.name==4">
+	<buttons [data]="data" [events]="events"></buttons>
+</ion-content>
+
+<ion-content *ngIf="page.name==5">
+	<cards [data]="data" [events]="events"></cards>
+</ion-content>
+
+<ion-content *ngIf="page.name==6">
+	<checkbox [data]="data" [events]="events"></checkbox>
+</ion-content>
+
+<ion-content *ngIf="page.name==7">
+	<datetime [data]="data" [events]="events"></datetime>
+</ion-content>
+
+<ion-content *ngIf="page.name==8">
+	<fabs [data]="data" [events]="events"></fabs>
+</ion-content>
+
+<ion-content *ngIf="page.name==9">
+	<inputs [data]="data" [events]="events"></inputs>
+</ion-content>
+
+<ion-content *ngIf="page.name==10">
+	<lists [data]="data" [events]="events"></lists>
+</ion-content>
+
+<ion-content *ngIf="page.name==11" class="lama-vs-coban">
+	<loading [data]="data" [events]="events"></loading>
+</ion-content>
+
+<ion-content *ngIf="page.name==13">
+	<modals [data]="data" [events]="events"></modals>
+</ion-content>
+
+<popover *ngIf="page.name==14" [data]="data" [events]="events"></popover>
+
+<ion-content *ngIf="page.name==15">
+	<radio [data]="data" [events]="events"></radio>
+</ion-content>
+
+<ion-content *ngIf="page.name==16">
+	<range [data]="data" [events]="events"></range>
+</ion-content>
+
+<ion-content *ngIf="page.name==17">
+	<searchbar [data]="data" [events]="events"></searchbar>
+</ion-content>
+
+<ion-content *ngIf="page.name==18">
+	<segment [data]="data" [events]="events"></segment>
+</ion-content>
+
+<ion-content *ngIf="page.name==19">
+	<select [data]="data" [events]="events"></select>
+</ion-content>
+
+<ion-content *ngIf="page.name==20">
+	<slides [data]="data" [events]="events"></slides>
+</ion-content>
+
+<!-- <ion-content *ngIf="page.name==21">
+	<tabs [data]="data" [events]="events"></tabs>
+</ion-content> -->
+
+<ion-content *ngIf="page.name==22">
+	<toast [data]="data" [events]="events"></toast>
+</ion-content>
+
+<ion-content *ngIf="page.name==23">
+	<toggle [data]="data" [events]="events"></toggle>
+</ion-content>
+
+<ion-content *ngIf="page.name==24">
+	<toolbar [data]="data" [events]="events"></toolbar>
+</ion-content>
+
+

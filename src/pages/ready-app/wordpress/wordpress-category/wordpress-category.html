@@ -1,0 +1,32 @@
+<!--
+  Generated template for the WordpressCategoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Category</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="white-1">
+  <ion-spinner class="indicator" [ngClass]="spnState"></ion-spinner>
+    <ion-card *ngFor="let item of data"  class="bdra-5 card card-md" (click)="wpService.goToPosts(navCtrl,item)">
+      <ion-card-header class="fs-13 fw-600 uppercase card-header card-header-md" [innerHTML]="item.name"></ion-card-header>
+      <ion-card-content class="card-content card-content-md">
+        <p class="text-grey-4 fs-13" [innerHTML]="item.description"></p>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-row class="pdl-5 pdr-5">
+<ion-col col-6 *ngFor="let item of data" class="mgb-10 ani-right-to-left">
+<div class="wrapper-info-gallery">
+	<img src="{{item.path}}" alt="" (click)="onCallbackEvent('onClick',item, $event)">
+</div>
+
+<div class="text-info">
+	<h4 class="title fs-13 fw-500 text-ellipsis mgt-5 mgb-0" [innerHTML]="item.title"></h4>
+</div>
+
+</ion-col>
+</ion-row>

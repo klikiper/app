@@ -1,0 +1,18 @@
+
+<div>
+  
+  <ion-searchbar (ionInput)="getItems($event)" color="primary" class="dark-searchbar round black text-white"></ion-searchbar>
+
+  <ion-searchbar (ionInput)="getItems($event)" color="primary" class="light-searchbar round grey-1 text-black"></ion-searchbar>
+
+  <ion-searchbar (ionInput)="getItems($event)" color="primary" class="dark-searchbar round line green text-white"></ion-searchbar>
+  
+  <ion-searchbar (ionInput)="getItems($event)" color="primary" class="dark-searchbar pink text-white"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+
+</div>

@@ -1,0 +1,68 @@
+<div class="white-1 blog-detail">
+  <ion-card class="bdra-5 blue shadow-2 ani-bottom-to-left">
+    <ion-card-content>
+      <div class="">
+        <h2 class="fw-600 fs-30 text-center pdt-20 pdb-20 text-white">{{days +':'+ hours +':'+ minutes +':'+ seconds}}</h2>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="bdra-0 stroke-bottom stroke-red stroke-3 ani-bottom-to-left">
+    <ion-card-content>
+      <div class="">
+        <h2 class="fw-600 fs-30 text-center pdt-20 pdb-20 text-red">{{days +':'+ hours +':'+ minutes +':'+ seconds}}</h2>
+      </div>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear class="text-black" (click)="restart()">
+            <ion-icon name="md-refresh"></ion-icon>
+            <div>Restar</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <button ion-button icon-left clear class="text-black" (click)="play()" *ngIf="running == false">
+            <ion-icon name="ios-play"></ion-icon>
+            <div>Play</div>
+          </button>
+          <button ion-button icon-left clear class="text-black" (click)="play()" *ngIf="running == true">
+            <ion-icon name="ios-pause"></ion-icon>
+            <div>Pause</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="bdra-5 comingsoon-card-img pst-relative ani-bottom-to-left">
+    <img src="assets/img/bg5.jpg" alt="">
+    <ion-card-content class="black-opct-1">
+      <div class="wrapper-time text-center">
+        <span class="inline-block white-opct text-white bdra-5 time-element mg-5 fs-20 fw-600 pd-15">{{days}}</span>
+        <span class="inline-block white-opct text-white bdra-5 time-element mg-5 fs-20 fw-600 pd-15">{{hours}}</span>
+        <span class="inline-block white-opct text-white bdra-5 time-element mg-5 fs-20 fw-600 pd-15">{{minutes}}</span>
+        <span class="inline-block white-opct text-white bdra-5 time-element mg-5 fs-20 fw-600 pd-15">{{seconds}}</span>
+      </div>
+      <ion-row class="mgt-20">
+        <ion-col center text-center>
+          <button ion-button icon-left round small class="text-white white-opct" (click)="restart()">
+            <ion-icon name="md-refresh"></ion-icon>
+            <div>Restar</div>
+          </button>
+        </ion-col>
+
+        <ion-col center text-center>
+          <button ion-button icon-left round small class="text-white white-opct" (click)="play()" *ngIf="running == false">
+            <ion-icon name="ios-pause"></ion-icon>
+            <div>Play</div>
+          </button>
+          <button ion-button icon-left round small class="text-white white-opct" (click)="play()" *ngIf="running == true">
+            <ion-icon name="ios-pause"></ion-icon>
+            <div>Pause</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</div>

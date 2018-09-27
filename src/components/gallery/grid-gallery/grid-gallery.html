@@ -1,0 +1,9 @@
+<div>
+	<ion-row class="">
+		<ion-col col-3 class="pd-0 ani-scale" *ngFor="let item of data">
+			<div class="wrapper-grid-gallery">
+				<img src="{{item.path}}" alt="" (click)="onCallbackEvent('onClick',item, $event)">
+		 	</div>
+		</ion-col>
+	</ion-row>
+</div>

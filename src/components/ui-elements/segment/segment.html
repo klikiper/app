@@ -1,0 +1,167 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Segment</ion-title>
+  </ion-navbar>
+  
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet" class="segment-bg text-white blue">
+      <ion-segment-button class="fs-14" value="puppies">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button class="fs-14" value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button class="fs-14" value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  
+  <ion-toolbar no-border-top class="mgt-5">
+    <ion-segment [(ngModel)]="pet" class="segment-line-deviation text-red stroke-red">
+      <ion-segment-button class="fs-14" value="puppies">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button class="fs-14" value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button class="fs-14" value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-toolbar no-border-top class="mgt-5">
+    <ion-segment [(ngModel)]="pet" class="segment-line-balance text-green stroke-green">
+      <ion-segment-button class="fs-14" value="puppies">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button class="fs-14" value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button class="fs-14" value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-toolbar no-border-top class="mgt-5">
+    <ion-segment [(ngModel)]="pet" class="segment-btn-group text-black stroke-black stroke-1 bdra-5">
+      <ion-segment-button class="fs-14 black" value="puppies">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button class="fs-14 black" value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button class="fs-14 black" value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet" class="segment-btn-group text-pink stroke-pink stroke-2 bdra-15">
+      <ion-segment-button class="fs-14 pink" value="puppies">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button class="fs-14 pink" value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button class="fs-14 pink" value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt1.jpg">
+        </ion-thumbnail>
+        <h2>Ruby</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt2.jpg">
+        </ion-thumbnail>
+        <h2>Oscar</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt3.jpg">
+        </ion-thumbnail>
+        <h2>Zoey</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt4.jpg">
+        </ion-thumbnail>
+        <h2>Otto</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt5.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt1.jpg">
+        </ion-thumbnail>
+        <h2>Milo</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt2.jpg">
+        </ion-thumbnail>
+        <h2>Bandit</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt3.jpg">
+        </ion-thumbnail>
+        <h2>Nala</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'ducklings'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt4.jpg">
+        </ion-thumbnail>
+        <h2>Daffy</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt5.jpg">
+        </ion-thumbnail>
+        <h2>Huey</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt1.jpg">
+        </ion-thumbnail>
+        <h2>Dewey</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/avt2.jpg">
+        </ion-thumbnail>
+        <h2>Louie</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

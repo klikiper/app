@@ -1,0 +1,55 @@
+profile-v4 {
+		masonry-brick{
+			width: 33.33%;
+			padding: 2px;
+			img{
+				display: block;
+			}
+		}
+		.cover-blur{
+			position: relative;
+			overflow: hidden;
+		}
+		.wrapper-cover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				min-width: 110%;
+				height: 100%;
+				filter: blur(8px);
+			}
+		}
+		.wrapper-avt{
+			border-radius: 50%;
+			height: 70px;
+			width: 70px;
+			overflow: hidden;
+			img{
+				height: 100%;
+				max-width: unset;
+				min-width: 100%;
+			}
+		}
+		.wrapper-prd{
+			.thumb-prd{
+				overflow: hidden;
+				height: 75px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img{
+					height: 100%;
+					max-width: unset;
+					min-width: 100%;
+				}
+			}
+		}
+}

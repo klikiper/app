@@ -1,0 +1,22 @@
+magazine-list {
+	.line-decor{
+		display: block;
+		height: 5px;
+		width: 90px;
+	}
+	.wrapper-news{
+		.left-bookmark{
+			position: absolute;
+			left: 15px;
+			top: 0;
+		}
+		.right-bookmark{
+			position: absolute;
+			right: 15px;
+			top: 0;
+		}
+		img{
+			min-height: 100%;
+		}
+	}
+}

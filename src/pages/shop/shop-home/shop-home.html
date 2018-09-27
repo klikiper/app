@@ -1,0 +1,25 @@
+
+<ion-header >
+    <ion-toolbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title *ngIf="check_search != true"></ion-title>
+      <ion-searchbar class="light-searchbar round transparent text-white" *ngIf="check_search == true"></ion-searchbar>
+
+      <ion-buttons end class="toolbar-group-btn">
+        <button ion-button small icon-only color="royal" class="mgr-10" (click)="show_search()">
+          <ion-icon class="fs-18" name="ios-search" *ngIf="check_search != true"></ion-icon>
+          <ion-icon class="fs-24" name="ios-close" *ngIf="check_search == true"></ion-icon>
+        </button>
+        <button ion-button small icon-only color="royal" class="mgr-10 fs-14" (click)="openCart()">
+          <ion-icon class="fs-20" name="md-basket"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+    <!-- <expandable-header-shop class="lama-vs-coban" [scrollArea]="shopcontent" headerHeight="45"></expandable-header-shop> -->
+</ion-header>
+
+<ion-content fullscreen #shopcontent>
+	<shop-home [data]="data" [events]="events"></shop-home>
+</ion-content>

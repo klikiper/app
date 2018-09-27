@@ -1,0 +1,43 @@
+
+  <div *ngIf="data!=null">
+
+    <div class="wrapper-page text-center {{data.ani}}">
+      <button ion-button outline icon-only small color="dark" class="text-grey-3 stroke-grey-3 stroke-1 button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+        <ion-icon name="ios-close"></ion-icon>
+      </button>
+
+      <div>
+        <ion-row>
+          <h3 class="fs-20 fw-600 text-black mgb-30 mgt--30 spacing-3 pull-left ani-fade-out">{{data.txtHead}}</h3>
+        </ion-row>
+
+        <ion-row class="logo-img mgb-70 pull-left ani-fade-out">
+          <img [src]="data.imgLogo" alt="">
+        </ion-row>
+
+        <ion-list class="ani-right-to-left">
+          <ion-item class="fs-13 text-black line-1 pdl-0 stroke-black">
+            <ion-input type="text" placeholder="{{data.txtUserName}}" [(ngModel)]="username"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <ion-list class="ani-right-to-left">
+          <ion-item class="fs-13 text-black line-1 pdl-0 stroke-black">
+            <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div class="text-center ani-bottom-to-top">
+          <button ion-button block round color="dark" class="mgt-30 text-white uppercase spacing-1 shadow-3 black" (click)="onCallbackEvent('onLogin')">{{data.btnLogin}}</button>
+        </div>
+      </div>
+
+      <button ion-button color="light" clear small class="mgb-20 btn-signup text-grey-5 ani-fade-out" (click)="onCallbackEvent('onSignUp')">{{data.btnSignUp}}</button>
+    </div>
+
+  </div>
+
+
+
+
+

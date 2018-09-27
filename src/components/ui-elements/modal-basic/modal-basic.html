@@ -1,0 +1,46 @@
+<ion-header class="skin-transparent transparent">
+  <ion-toolbar class="skin-transparent">
+    <ion-title>
+      modal_basic
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only class="circle text-grey-5 button-circle mgr-10 mgl-10" (click)="dismiss()">
+        <ion-icon name="ios-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>    
+  <h4 padding class="mgt-50 mgb-10">modal_box_title</h4>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>view_all_location</ion-label>
+      <ion-toggle [(ngModel)]="all_local"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>county</ion-label>
+      <ion-select [disabled]="all_local ? true : null" [(ngModel)]="county">
+        <ion-option value="null">County 1</ion-option>
+        <ion-option value="null">County 2</ion-option>
+        <ion-option value="null">County 3</ion-option>
+        <ion-option value="null">County 4</ion-option>
+        <ion-option value="null">County 5</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>cities</ion-label>
+      <ion-select [disabled]="all_local ? true : null" [(ngModel)]="cities">
+        <ion-option value="null">All cities</ion-option>
+        <ion-option value="null">Cities 1</ion-option>
+        <ion-option value="null">Cities 2</ion-option>
+        <ion-option value="null">Cities 3</ion-option>
+        <ion-option value="null">Cities 4</ion-option>
+        <ion-option value="null">Cities 5</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

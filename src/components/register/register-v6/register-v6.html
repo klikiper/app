@@ -1,0 +1,82 @@
+
+<div class="signup-6 white">
+  
+  <ion-row class="wrapper-top-signup ani-right-to-left">
+    <button ion-button outline icon-only small color="dark" class="mgt-10 mgl-15 mgr-10 text-black stroke-black stroke-1 button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="ios-close"></ion-icon>
+    </button>
+    <h3 class="fs-14 fw-500 text-black uppercase mgb-20 spacing-3 pull-left">{{data.txtHead}}</h3>
+  </ion-row>
+
+  
+  <div class="bg-img">
+    <img [src]="data.imgBg" alt="">
+  </div>
+
+  <div class="wrapper-page white-opct-1">
+    
+    <div class="main-form full-width mgt-30">
+      <ion-slides #signupSlider class="ani-bottom-to-top">
+        <ion-slide class="text-white pdr-35 pdl-35">
+          <div class="white shadow-3 mgt-30 pdb-25 form-1">
+            <img class="mgt--35 mgl--20 pull-left ani-left-to-right shadow-3" src="assets/img/demo4.jpg">
+            <div class="clear-both" padding>
+              <ion-list class="mgb-10">
+                <ion-label class="text-black fs-12 uppercase text-left mgb-0">User name</ion-label>
+                <ion-item class="pdl-0 fs-13 text-grey-3 line-1 stroke-grey-3">
+                  <ion-input type="text" placeholder="{{data.txtUserName}}" [(ngModel)]="username"></ion-input>
+                </ion-item>
+              </ion-list>
+              <ion-list class="mgb-10">
+                <ion-label class="text-black fs-12 uppercase text-left mgb-0">Full name</ion-label>
+                <ion-item class="pdl-0 fs-13 text-grey-3 line-1 stroke-grey-3">
+                  <ion-input type="text" placeholder="{{data.txtFullName}}" [(ngModel)]="fullname"></ion-input>
+                </ion-item>
+              </ion-list>
+              <ion-list class="mgb-10">
+                <ion-label class="text-black fs-12 uppercase text-left mgb-0">Address</ion-label>
+                <ion-item class="pdl-0 fs-13 text-grey-3">
+                  <ion-input type="text" placeholder="{{data.txtAddress}}" [(ngModel)]="address"></ion-input>
+                </ion-item>
+              </ion-list>
+            </div>
+          </div>
+          
+          <button ion-button large (click)="next()" color="light" class="mgt--35 text-white uppercase fw-500 spacing-3 fs-13 tim-vs-datroi bdra-0 pdl-40 pdr-40 pull-right mgr--20 ani-right-to-left shadow-2">
+            Next step
+          </button>
+        </ion-slide>
+
+        <ion-slide class="text-white pdr-35 pdl-30">
+          <div class="white mgt-30 shadow-3 pdb-20 form-2 text-left">
+            <img class="mgt--35 mgr--20 pull-right ani-left-to-right shadow-3" src="assets/img/demo6.jpg">
+            <div class="clear-both" padding>
+              <ion-list class="mgb-10">
+                <ion-label class="text-black fs-12 uppercase text-left mgb-0">Email</ion-label>
+                <ion-item class="pdl-0 fs-13 text-grey-3 line-1 stroke-grey-3">
+                  <ion-input type="text" placeholder="{{data.txtEmail}}" [(ngModel)]="email"></ion-input>
+                </ion-item>
+              </ion-list>
+              <ion-list class="mgb-10">
+                <ion-label class="text-black fs-12 uppercase text-left mgb-0">Password</ion-label>
+                <ion-item class="pdl-0 fs-13 text-grey-3">
+                  <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+                </ion-item>
+              </ion-list>
+
+              <button ion-button round color="dark" class="mgt-20 text-white uppercase spacing-1 shadow-3 pink-vs-red" (click)="onCallbackEvent('onSignUp')">
+               {{data.btnSignUp}}
+              </button>  
+            </div>
+          </div>
+
+          <button ion-button large (click)="prev()" color="light" class="pdt-20 mgt--15 text-white uppercase fw-500 spacing-3 fs-13 tim-vs-datroi bdra-0 pdl-40 pdr-40 pull-right mgr--20 ani-right-to-left shadow-2">
+            Back step
+          </button>
+        </ion-slide>
+      </ion-slides>
+
+    </div>
+
+  </div>
+</div>

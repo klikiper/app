@@ -1,0 +1,63 @@
+<div padding class="white-1" *ngIf="data!=null">
+	<div class="cover mgt--20 mgl--20 mgr--20 ani-fade-out">
+		<img [src]="data.user.imgCover" alt="">
+	</div>
+	<div class="mgt--50 text-center ani-bottom-to-top">
+		<div class="thumb-avt-pst shadow-3">
+			<img [src]="data.user.imgAvatar" alt="">
+		</div>
+		<h2>{{data.user.username}}</h2>
+		<p>{{data.user.job}}</p>
+		<button ion-button small round outline class="stroke stroke-1 stroke-pink text-pink" (click)="onCallbackEvent('onAddFriendClick')">{{data.label.btnAddFriend}}</button>
+		<button ion-button small round class="pink text-white" (click)="onCallbackEvent('onFollowClick')">{{data.label.btnFollow}}</button>
+	</div>
+
+	<ion-row class="mgt-10 ani-bottom-to-top">
+		<ion-col class="text-center">
+			<p class="fw-600 fs-18 mgb-0">{{data.user.followerCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollower}}</p>
+		</ion-col>
+		<ion-col class="text-center">
+			<p class="fw-600 fs-18 mgb-0">{{data.user.followingCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollowing}}</p>
+		</ion-col>
+		<ion-col class="text-center">
+			<p class="fw-600 fs-18 mgb-0">{{data.user.photosCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtPhotos}}</p>
+		</ion-col>
+	</ion-row>
+
+	<ion-row class="mgt-30 ani-right-to-left">
+		<h5 class="mgb-0 fs-14 uppercase text-grey-3">{{data.label.txtAboutMe}}</h5>
+		<p class="mgt-10 text-grey-4 mgb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla massa ante, sollicitudin sit amet ante et, suscipit ultrices justo.</p>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onFacebookIconClick')">
+			<ion-icon name="logo-facebook"></ion-icon>
+		</button>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onTwitterIconClick')">
+			<ion-icon name="logo-twitter"></ion-icon>
+		</button>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onInstagramIconClick')">
+			<ion-icon name="logo-instagram"></ion-icon>
+		</button>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onGoogleIconClick')">
+			<ion-icon name="logo-google"></ion-icon>
+		</button>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onPinterestIconClick')">
+			<ion-icon name="logo-pinterest"></ion-icon>
+		</button>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onDribbleIconClick')">
+			<ion-icon name="logo-dribbble"></ion-icon>
+		</button>
+		<button ion-button clear small icon-only class="text-grey-4" (click)="onCallbackEvent('onLinkedInIconClick')">
+			<ion-icon name="logo-linkedin"></ion-icon>
+		</button>
+	</ion-row>
+	
+
+	<h5 class="fs-14 uppercase mgt-40 mgb-20 text-grey-3 ani-right-to-left">{{data.label.txtPhotos}}</h5>
+	<ion-row class="wrapper-photo mgl--5 mgr--5 mgb-30">
+		<ion-col col-4 *ngFor="let item of data.photos">
+			<div class="bdra-5 thumb-prd"><img [src]="item.path" alt=""></div>
+		</ion-col>
+	</ion-row>
+</div>

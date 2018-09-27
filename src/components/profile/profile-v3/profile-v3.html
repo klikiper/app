@@ -1,0 +1,77 @@
+<div padding class="white-1" *ngIf="data!=null">
+  	<div class="cover mgl--20 mgr--20 mgt--20 black-opct ani-left-to-right">
+  		<img [src]="data.user.imgCover" alt="">
+  	</div>
+
+	<ion-row class="mgt--30 ani-right-to-left">
+	  	<div class="wrapper-avt pdl-0" col-4>
+	  		<img [src]="data.user.imgAvatar" alt="">
+	  	</div>
+	  	<div class="mgt-40 pdl-15" col-8>
+	  		<h2 class="mgb-0 spacing-1">{{data.user.username}}</h2>
+	  		<p class="status mgt-0 text-grey-4">{{data.user.quote}}</p>
+	  	</div>
+	</ion-row>
+
+	<p class="text-grey-4 mgt-0 ani-right-to-left">{{data.user.job}}</p>
+
+  	<ion-row class="mgt-10 spacing-1 ani-bottom-to-top">
+  		<ion-col>
+			<p class="fw-600 fs-16 mgb-0">{{data.user.likeCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtLikes}}</p>
+		</ion-col>
+		<ion-col>
+			<p class="fw-600 fs-16 mgb-0">{{data.user.followerCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollower}}</p>
+		</ion-col>
+		<ion-col>
+			<p class="fw-600 fs-16 mgb-0">{{data.user.followingCount}}</p>
+			<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollowing}}</p>
+		</ion-col>
+	</ion-row>
+
+	<ion-row class="mgt-10 ani-bottom-to-top">
+		<ion-col>
+			<button ion-button block class="stroke stroke-black stroke-2 uppercase bdra-0 transparent text-black fw-500 spacing-1 fs-13"  (click)="onCallbackEvent('onFollowClick')">{{data.label.btnFollow}}</button>
+		</ion-col>
+		<ion-col>
+			<button ion-button block class="bdra-0 black uppercase text-white fw-500 spacing-1 fs-13" (click)="onCallbackEvent('onSendMessageClick')">{{data.label.btnMessage}}</button>
+		</ion-col>
+	</ion-row>
+
+	<ion-toolbar no-border-top class="mgt-5 mgb-20 mgt-30 ani-bottom-to-top">
+	    <ion-segment [(ngModel)]="show_prd" class="segment-line-balance text-black stroke-black">
+	      	<ion-segment-button class="fs-12 pdl-5 pdr-5 text-left" value="photos">{{data.label.txtPhotos}}</ion-segment-button>
+	      	<ion-segment-button class="fs-12 pdl-5 pdr-5 text-left" value="video">{{data.label.txtVideos}}</ion-segment-button>
+	      	<ion-segment-button class="fs-12 pdl-5 pdr-5 text-left" value="app">{{data.label.txtApps}}</ion-segment-button>
+	      	<ion-segment-button class="fs-12 pdl-5 pdr-5 text-left" value="web">{{data.label.txtWebs}}</ion-segment-button>
+	    </ion-segment>
+	</ion-toolbar>
+
+	<div [ngSwitch]="show_prd" class="wrapper-show-prd mgb-30 ani-bottom-to-top">
+	    <ion-row class="mgl--5 mgr--5" *ngSwitchCase="'photos'">
+	      	<ion-col col-4 *ngFor="let item of data.photos">
+				<div class="thumb-prd"><img [src]="item.path" alt=""></div>
+			</ion-col>
+	
+	    </ion-row>
+
+	    <ion-row *ngSwitchCase="'video'">
+	       	<ion-col col-4 *ngFor="let item of data.videos">
+				<div class="thumb-prd"><img [src]="item.path" alt=""></div>
+			</ion-col>
+	    </ion-row>
+
+	    <ion-row *ngSwitchCase="'app'">
+	      	 	<ion-col col-4 *ngFor="let item of data.apps">
+				<div class="thumb-prd"><img [src]="item.path" alt=""></div>
+			</ion-col>
+	    </ion-row>
+
+	    <ion-row *ngSwitchCase="'web'">
+	      	<ion-col col-4 *ngFor="let item of data.webs">
+				<div class="thumb-prd"><img [src]="item.path" alt=""></div>
+			</ion-col>
+	    </ion-row>
+	</div>
+</div>

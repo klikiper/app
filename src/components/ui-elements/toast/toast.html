@@ -1,0 +1,24 @@
+<div padding class="{{main_bg}}">
+  
+  <h5 class="mgt-10 mgb-15">Basic</h5>
+  
+  <button ion-button block round class="d-purple" (click)="showToast('top')">Show Toast Top Position</button>
+  <button ion-button block round class="indigo" (click)="showToast('middle')">Show Toast Middle Position</button>
+  <button ion-button block round class="blue" (click)="showToast('bottom')">Show Toast Bottom Position</button>
+  <button ion-button block round class="teal" (click)="showLongToast()">Show Long Toast</button>
+  <button ion-button block round class="black" (click)="showToastWithCloseButton()">Show Toast W/ Close Button</button>
+
+  <h5 class="mgt-30 mgb-15">Opacity</h5>
+
+  <button ion-button block round class="white-opct text-white shadow-1 mgb-15" (click)="showBgColorToast('top', 'white-opct')">Show Toast Opacity White</button>
+  <button ion-button block round class="black-opct" (click)="showBgColorToast('top', 'black-opct')">Show Toast Opacity black</button>
+
+  <h5 class="mgt-30 mgb-15">Background color</h5>
+  
+  <button ion-button block round class="white text-grey-5 shadow-1" (click)="showBgColorToast('top', 'white')">Show Toast white</button>
+  <button ion-button block round class="yellow text-grey-5" (click)="showBgColorToast('top', 'yellow')">Show Toast warning</button>
+  <button ion-button block round class="red" (click)="showBgColorToast('top', 'red')">Show Toast danger</button>
+  <button ion-button block round class="l-green" (click)="showBgColorToast('top', 'l-green')">Show Toast success</button>
+  <button ion-button block round class="l-blue" (click)="showBgColorToast('top', 'l-blue')">Show Toast info</button>
+
+</div>

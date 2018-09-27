@@ -1,0 +1,24 @@
+
+
+<ion-header>
+	<ion-toolbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title *ngIf="check_search != true"></ion-title>
+		<ion-searchbar class="dark-searchbar round transparent text-white" *ngIf="check_search == true"></ion-searchbar>
+		<ion-buttons end class="toolbar-group-btn">
+			<button ion-button small icon-only color="royal" class="mgr-10" (click)="show_search()">
+				<ion-icon class="fs-18" name="ios-search" *ngIf="check_search != true"></ion-icon>
+				<ion-icon class="fs-24" name="ios-close" *ngIf="check_search == true"></ion-icon>
+			</button>
+			<button ion-button small icon-only color="royal" class="mgr-10 fs-14">
+				<ion-icon class="fs-20" name="md-more"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="lama-vs-coban">
+	<music-category [data]="data" [events]="events"></music-category>
+</ion-content>

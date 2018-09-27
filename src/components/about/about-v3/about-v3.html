@@ -1,0 +1,53 @@
+<div padding class="white-1 about-v3" *ngIf="data!=null">	
+	<div class="banner">
+		<div class="pst-relative mgl-20" col-9>
+			<img class="ani-top-to-right" src="assets/img/bg14.jpg" alt="">
+			<div class="decor transparent stroke stroke-grey-2 ani-bottom-to-left"></div>
+		</div>
+		<h2 class="fw-800 fs-40 uppercase text-grey-3 text-right pdt-10 pdr-20 ani-left-to-right">{{data.label.txtContact}}</h2>
+	</div>
+
+	<div class="mgb-30 mgt-40 ani-bottom-to-top">
+		<h4 class="fs-20 fw-600 mgb-25">{{data.label.txtAboutUs}}</h4>
+		<p class="text-grey-4 fs-13 mgt-0 mgb-0 pdl-20">{{data.address1}}</p>
+		<p class="text-grey-4 fs-13 mgt-0 mgb-0 pdl-20">Call Us: {{data.phone1}}</p>
+		<p class="text-grey-4 fs-13 mgt-0 mgb-0 pdl-20">{{data.txtWorkingTime}}</p>
+		<p class="text-grey-4 fs-13 mgt-0 mgb-0 pdl-20">{{data.workingTime}}</p>
+	</div>
+
+	<div class="row map ani-right-to-left">
+		<div class="mgl-40" col-9>
+			<iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(data.google_map)" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<ion-row class="mgt-50 ani-top-to-bottom">
+		<h2 class="fw-600">Just say hi!</h2>
+		<p class="text-grey-4 fs-13 pdl-20">{{data.about}}</p>
+	</ion-row>
+  	
+  	<div padding class="bdra-10 mgt-20 pdb-30 pdt-25 shadow-3 pst-relative white ani-fade-out">
+    	<ion-list>
+		    <ion-item class="text-grey-4 stroke stroke-2 stroke-grey-3">
+		      	<ion-input type="text" [(ngModel)]="fullname" placeholder="{{data.label.txtFullName}}"></ion-input>
+		    </ion-item>
+		</ion-list>
+		<ion-list>
+		    <ion-item class="text-grey-4 stroke stroke-2 stroke-grey-3">
+		      	<ion-input type="text" [(ngModel)]="email" placeholder="{{data.label.txtEmail}}"></ion-input>
+		    </ion-item>
+		</ion-list>
+		<ion-list>
+		    <ion-item class="text-grey-4 stroke stroke-2 stroke-grey-3">
+		      	<ion-input type="text" [(ngModel)]="message" placeholder="{{data.label.txtMessage}}"></ion-input>
+		    </ion-item>
+		</ion-list>
+		<button ion-button icon-right round class="btn-send black text-white shadow-3" (click)="onCallbackEvent('onSendMessage')">{{data.label.txtSend}} <ion-icon class="fs-28" name="ios-send-outline"></ion-icon></button>
+  	</div>
+
+  	<div class="pdl-30 mgt-50 mgb-30 ani-left-to-right">
+  		<button ion-button icon-only class="button-circle grey-3 text-white"><ion-icon class="fs-20" name="logo-facebook"></ion-icon></button>
+  		<button ion-button icon-only class="button-circle grey-3 text-white"><ion-icon class="fs-20" name="logo-linkedin"></ion-icon></button>
+  		<button ion-button icon-only class="button-circle grey-3 text-white"><ion-icon class="fs-20" name="logo-twitter"></ion-icon></button>
+  	</div>
+</div>

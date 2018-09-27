@@ -1,0 +1,41 @@
+<ion-content padding class="modal-box">
+  <ion-row class="close-modal" (click)="dismiss()"></ion-row>
+  <ion-row class="main-modal bdra-10" col-2>
+    <div class="modal-box-wrapper">
+      
+      <h4 class="mgb-10">modal_box_title</h4>
+      <h6 class="mgt-5 mgb-20">modal_box_quote</h6>
+      
+      <ion-list>
+        <ion-item>
+          <ion-label>view_all_location</ion-label>
+          <ion-toggle [(ngModel)]="all_local"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>county</ion-label>
+          <ion-select [disabled]="all_local ? true : null" [(ngModel)]="county">
+            <ion-option value="null">County 1</ion-option>
+            <ion-option value="null">County 2</ion-option>
+            <ion-option value="null">County 3</ion-option>
+            <ion-option value="null">County 4</ion-option>
+            <ion-option value="null">County 5</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>cities</ion-label>
+          <ion-select [disabled]="all_local ? true : null" [(ngModel)]="cities">
+            <ion-option value="null">All cities</ion-option>
+            <ion-option value="null">Cities 1</ion-option>
+            <ion-option value="null">Cities 2</ion-option>
+            <ion-option value="null">Cities 3</ion-option>
+            <ion-option value="null">Cities 4</ion-option>
+            <ion-option value="null">Cities 5</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </ion-row>
+</ion-content>

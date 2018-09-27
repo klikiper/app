@@ -1,0 +1,45 @@
+<div *ngIf="data!=null">
+  <div class="bg-img">
+    <img [src]="data.imgBg" alt="">
+  </div>
+ 
+  <div class="wrapper-page text-center black-opct-1 {{data.ani}}">
+    <button ion-button outline icon-only small color="dark" class="text-grey-3 stroke-grey-3 stroke-1 button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="ios-close"></ion-icon>
+    </button>
+    
+    <div class="full-width">
+      <ion-row class="logo-img mgb-50 ani-fade-out">
+        <img class="mg-auto" [src]="data.imgLogo" alt="">
+        <p class="text-grey-3 mgt-0 pdl-15 pdr-15">{{data.txtHead}}</p>
+      </ion-row>
+      <ion-list class="mgb-0 ani-bottom-to-top">
+        <ion-item class="text-white white-opct">
+          <ion-input type="text" placeholder="{{data.txtUserName}}" [(ngModel)]="username"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="ani-bottom-to-top">
+        <ion-item class="text-white white-opct">
+          <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      
+      <button ion-button block color="light" class="ani-bottom-to-top white-opct text-white uppercase fw-600 spacing-1"  (click)="onCallbackEvent('onLogin')">{{data.btnLogin}}</button>
+
+      <button ion-button color="light" clear block small class="ani-fade-out mgb-35 mgt-20 pull-right text-grey-3"
+       (click)="onCallbackEvent('onForgotPassword')">{{data.btnForgotPassword}}</button>
+
+      <ion-row class="block text-center ani-fade-out">
+        <button ion-button icon-only color="light" class="text-white indigo pdl-20 pdr-20 fs-12" (click)="onCallbackEvent('onFacebookLogin')">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+        <button ion-button icon-only color="light" class="text-white cyan pdl-20 pdr-20 fs-12" (click)="onCallbackEvent('onTwitterLogin')">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </button>
+      </ion-row>
+      
+      <button ion-button color="light" clear block small class="ani-fade-out btn-signup mgb-15 text-grey-3"  (click)="onCallbackEvent('onSignUp')">{{data.btnSignUp}}</button>
+
+    </div>
+  </div>
+  </div>

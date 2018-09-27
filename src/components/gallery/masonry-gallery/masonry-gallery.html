@@ -1,0 +1,5 @@
+ <masonry>
+  <masonry-brick class="brick" *ngFor="let item of data">  
+ 	<img src="{{item.path}}" (click)="onCallbackEvent('onClick',item, $event)">
+  </masonry-brick>
+</masonry>

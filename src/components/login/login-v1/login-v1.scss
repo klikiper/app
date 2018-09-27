@@ -1,0 +1,78 @@
+login-v1{
+	.back-page{
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		z-index: 10000;
+	}
+	.wrapper-page{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	.bg-img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			height: 100%;
+			max-width: unset !important;
+		}
+	}
+	.logo-img{
+		display: inline-block;
+		position: relative;
+		&:after{
+			content: "";
+			background: #fff;
+			height: 5px;
+			width: 85%;
+			right: -20%;
+			bottom: -30px;
+			position: absolute;
+			display: block;
+		}
+		img{
+			height: 30px;
+		}
+	}
+	h3{
+		position: relative;
+		padding-left: 20px;
+		&:after{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			content: "";
+			display: block;
+			background: $yellow;
+			height: 2px;
+			width: 30px;
+		}
+	}
+	.wrapper-page{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+	.btn-signup{
+		position: absolute;
+		bottom: 0;
+	}
+}

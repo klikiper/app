@@ -1,0 +1,72 @@
+<!--
+  Generated template for the Instagram page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>instagram</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="white">
+  <ion-spinner class="indicator" [ngClass]="spnState"></ion-spinner>
+  <ion-card class="bdra-5" *ngFor="let item of list">
+    <ion-item>
+      <ion-avatar item-start class="mgt-6 mgb-6">
+        <img src="{{item.user.profile_picture}}">
+      </ion-avatar>
+      <h2 class="fs-14 fw-600 text-grey-5">{{item.user.username}}</h2>
+      <p class="fs-10 text-grey-3">{{item.user.full_name}}</p>
+      <p *ngIf="item.caption!=null" class="fs-10 text-white">{{item.caption.created_time}}</p> 
+    </ion-item>
+
+    <img src="{{item.images.standard_resolution.url}}">
+
+    <ion-card-content>
+      <p *ngIf="item.caption!=null">{{item.caption.text}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small class="text-black favorite">
+          <ion-icon name="heart"></ion-icon>
+          <div>{{item.likes.count}}</div>
+        </button>
+      </ion-col>
+
+      <ion-col center text-center>
+         <button (click)="isService.goToComment(item,navCtrl)" ion-button icon-left clear small class="text-black">
+             <ion-icon name="chatbubbles"></ion-icon>
+             <div>{{item.comments.count}}</div>
+        </button>
+      </ion-col>
+
+      <ion-col right text-right>
+        <button (click)="isService.doOpen(item)" ion-button icon-left clear small class="text-black">
+          <ion-icon name="open"></ion-icon>
+        </button>
+      </ion-col>
+      
+      <ion-col right text-right>
+        <button (click)="isService.doShare(navCtrl,item)" ion-button icon-left clear small class="text-black">
+          <ion-icon name="share"></ion-icon>
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-card>
+
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

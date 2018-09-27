@@ -1,0 +1,48 @@
+register-v5 {
+	.signup-5{
+		min-height: 100%;
+		display: block;
+	}
+	ion-slides{
+		height: auto;
+		margin-bottom: 90px;
+		.swiper-wrapper{
+			align-items: flex-end;
+		}
+	}
+	.wrapper-top-signup{
+		position: relative;
+		z-index: 100;
+	}
+	.bg-img{
+		position: fixed;
+		top: 70px;
+		bottom: 25px;
+		left: 50px;
+		right: 30px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		img{
+			width: 100%;
+		}
+		>div{
+			flex: 1;
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+	.wrapper-page{
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: flex-end;
+	}
+	.main-form{
+		width: 100%;
+	}
+}

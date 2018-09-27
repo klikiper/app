@@ -1,0 +1,52 @@
+
+<div class="white-1">
+	<div padding class="top-gallery pdb-0">
+		<div class="white shadow-1 bdra-10">
+			<div class="wrapper-slide">
+				<ion-slides autoplay="1500" loop="true" effect="fade" speed="1000" class="height-auto" #slide4>
+					<ion-slide>
+					    <img src="{{data[0].path}}" alt="">
+					</ion-slide>
+					<ion-slide>
+					    <img src="{{data[1].path}}" alt="">
+					</ion-slide>
+					<ion-slide>
+					    <img src="{{data[2].path}}" alt="">
+					</ion-slide>
+				</ion-slides>
+			</div>
+
+			<div padding class="pdt-5">
+				<h4 class="uppercase fw-100 text-grey-4 mg-0">Experiment</h4>
+				<h1 class="mg-0">Free!</h1>
+				<p class="fs-13 text-grey-3 mgt-0">Explore new test functions.</p>
+				<button ion-button round class="lama-vs-coban text-white">Upgrade</button>
+			</div>
+		</div>
+	</div>
+
+	<h5 padding class="block pdb-0">Feature Shots</h5>
+
+	<ion-row class="pdl-5 pdr-5 pdb-15">
+		<ion-col col-6 *ngFor="let item of data" class="ani-right-to-left">
+			<div class="shadow-1 bdra-5 pdl-5 pdr-5 white">
+				<div class="text-info pdt-5 pdb-5 pdl-5">
+					<h4 class="title fs-12 text-grey-3 fw-500 text-ellipsis mgt-5 mgb-0" [innerHTML]="item.title"></h4>
+				</div>
+				<div class="wrapper-shots-gallery bdra-3">
+					<img src="{{item.path}}" alt="" (click)="onCallbackEvent('onClick',item, $event)">
+				</div>
+				<div class="btn-bottom">
+					<button ion-button icon-left clear small class="mg-0 fs-10 text-grey-3">
+						<ion-icon class="" name="md-heart-outline"></ion-icon>
+						271
+					</button>
+					<button ion-button icon-left clear small class="mg-0 fs-10 text-grey-3">
+						<ion-icon class="" name="ios-chatbubbles-outline"></ion-icon>
+						130
+					</button>
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+</div>

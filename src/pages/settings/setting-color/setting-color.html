@@ -1,0 +1,20 @@
+<ion-header *ngIf="settings!=null"  class="{{settings.skin.main_skin}}">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Theme Setting</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="settings!=null" padding class="{{settings.skin.main_bg}}">
+  	<h4 class="mgb-10 {{settings.skin.text_1}}">Setting color</h4>
+  	<h6 class="mgt-5 mgb-20 {{settings.skin.text_2}} fw-400">Choose color you love</h6>
+
+  	<ion-list no-lines class="lst-no-background" radio-group [(ngModel)]="selected_skin" (ionChange)="setSkin()" >
+	    <ion-item *ngFor="let item of list, let i = index" class="pdl-0 fs-13 text-grey-5">
+	      	<ion-label class="{{settings.skin.text_1}}">{{item.title}}</ion-label>
+	      	<ion-radio [value]="i"></ion-radio>
+	    </ion-item>
+  	</ion-list>
+</ion-content>

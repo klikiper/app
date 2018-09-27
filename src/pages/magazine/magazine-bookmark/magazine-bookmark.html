@@ -1,0 +1,28 @@
+<!--
+  Generated template for the MagazineBookmarkPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-toolbar class="pd-0 transparent skin-light skin skin-transparent">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+      <ion-title *ngIf="check_search != true"></ion-title>
+      <ion-searchbar class="light-searchbar round transparent text-white" *ngIf="check_search == true"></ion-searchbar>
+
+      <ion-buttons end class="toolbar-group-btn">
+        <button ion-button small icon-only color="royal" class="mgr-10" (click)="show_search()">
+          <ion-icon class="fs-18" name="ios-search" *ngIf="check_search != true"></ion-icon>
+          <ion-icon class="fs-24" name="ios-close" *ngIf="check_search == true"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<magazine-bookmark [data]="data" [events]="events"></magazine-bookmark>
+</ion-content>

@@ -1,0 +1,227 @@
+<div class="indigo-vs-purple profile-v6" *ngIf="data!=null">  
+	<div padding class="ani-bottom-to-top">
+		<ion-row>
+			<ion-col col-4 class="text-center mgt-20">
+				<button ion-button icon-only class="button-circle black-opct text-white" (click)="onCallbackEvent('onSettingClick')">
+					<ion-icon class="fs-20" name="ios-settings"></ion-icon>
+				</button>
+			</ion-col>
+			<div col-4 class="wrapper-avt">
+				<img src="{{data.user.imgAvatar}}" alt="">
+			</div>
+			<ion-col col-4 class="text-center mgt-20">
+				<button ion-button icon-only class="button-circle black-opct text-white" (click)="onCallbackEvent('onSendMessageClick')">
+					<ion-icon class="fs-20" name="ios-text"></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+		<h2 class="text-center text-white mgt-10 mgb-0">{{data.user.username}}</h2>
+		<p class="text-center text-white-2 mgt-5"><ion-icon name="ios-pin-outline" class="mgr-5"></ion-icon>{{data.user.address}}</p>
+	</div>
+
+	<ion-row class="spacing-1 pdb-10 mgt-40 ani-bottom-to-top">
+  		<ion-col class="text-center text-white stroke-right stroke-grey-3 stroke-1">
+			<p class="fs-20 mgb-0 mgt-0">{{data.user.postCount}}</p>
+			<p class="fs-13 text-white-2 mgt-0 mgb-5">{{data.label.txtPosted}}</p>
+		</ion-col>
+		<ion-col class="text-center text-white stroke-right stroke-grey-3 stroke-1">
+			<p class="fs-20 mgb-0 mgt-0">{{data.user.pinCount}}</p>
+			<p class="fs-13 text-white-2 mgt-0 mgb-5">{{data.label.txtPins}}</p>
+		</ion-col>
+		<ion-col class="text-center text-white stroke-right stroke-grey-3 stroke-1">
+			<p class="fs-20 mgb-0 mgt-0">{{data.user.followerCount}}</p>
+			<p class="fs-13 text-white-2 mgt-0 mgb-5">{{data.label.txtFollower}}</p>
+		</ion-col>
+		<ion-col class="text-center text-white">
+			<p class="fs-20 mgb-0 mgt-0">{{data.user.followingCount}}</p>
+			<p class="fs-13 text-white-2 mgt-0 mgb-5">{{data.label.txtFollowing}}</p>
+		</ion-col>
+	</ion-row>
+
+
+	<div class="mgt-50 pdb-20 ani-bottom-to-top">
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">29</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">11:05 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-list class="lst-no-background">
+              <ion-item class="pdl-0">
+                <ion-avatar item-start>
+                  <img src="assets/img/avt1.jpg">
+                </ion-avatar>
+                <h2 class="fs-13 fw-600 text-white">Woody</h2>
+                <p class="fs-12 text-grey-3">Designer</p>
+              </ion-item>
+            </ion-list>
+            <h3 class="fs-16 fw-600 mgb-10 text-white">Folly words widow one downs few age every seven.</h3>
+            <button ion-button round small icon-left outline class="stroke-white text-white">Call</button>
+            <button ion-button round small icon-left outline class="stroke-white text-white">SMS</button>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">27</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">9:01 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-14 fw-600 text-white">Nine Inch Nails Live</ion-card-title>
+            <p class="fs-12 text-grey-3">The most popular industrial group ever, and largelyresponsible.</p>
+
+            <ion-row>
+                <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-grey-2 pdl-0">
+                      <ion-icon name="thumbs-up"></ion-icon>
+                      <div>120</div>
+                  </button>
+                </ion-col>
+                <ion-col col-4 center text-center>
+                  <button ion-button icon-left clear small class="text-grey-2">
+                      <ion-icon name="text"></ion-icon>
+                      <div>40</div>
+                  </button>
+                </ion-col>
+                <ion-col col-4 right text-right>
+                  <button ion-button icon-left clear small class="text-grey-2 fs-20">
+                      <ion-icon name="ios-more"></ion-icon>
+                  </button>
+                </ion-col>
+            </ion-row>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">25</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">6:30 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <span class="text-white-2 inline-block mgt-10 indigo fs-11 bdra-5 pd-5 uppercase">
+              <ion-icon name="quote" class="fs-20 mgr-5"></ion-icon>quote
+            </span>
+            <ion-card-title class="fs-22 fw-600 text-white">Etiam rutrum iaculis nisi, eu faucibus arcu malesuada eu.</ion-card-title>
+
+            <ion-row>
+                <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-grey-3 pdl-0">
+                      <ion-icon name="thumbs-up"></ion-icon>
+                      <div>120</div>
+                  </button>
+                </ion-col>
+                <ion-col col-4>
+                  <button ion-button icon-left clear small class="text-grey-3">
+                      <ion-icon name="text"></ion-icon>
+                      <div>40</div>
+                  </button>
+                </ion-col>
+            </ion-row>
+
+            <ion-item class="mgt-30 transparent pdb-10">
+                <ion-avatar item-start class="mgt-6 mgb-6">
+                  <img src="assets/img/avt1.jpg">
+                </ion-avatar>
+                <h2 class="fs-14 text-white">Marty McFly</h2>
+                <p class="fs-10 text-grey-3">November 5, 1955</p>
+            </ion-item>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">21</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">8:25 pm</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-18 fw-600 text-white">Nine Inch Nails Live</ion-card-title>
+            <p class="mgb-20 text-grey-3">The most popular industrial group ever, and largelyresponsible.</p>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">19</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">7:09 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-22 fw-600 spacing-1 text-white">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+            <p class="text-grey-3">The most popular industrial group ever, and largelyresponsible for bringing the music to a mass audience.</p>
+            <button ion-button outline small round class="text-white stroke-1 stroke-white uppercase spacing-1 mgt-20 mgb-10">Read more</button>
+          </div>
+        </ion-row>
+      </ion-card>
+
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">9</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">1:33 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <img src="assets/img/bg16.jpg"/>
+            <ion-card-title class="fs-18 spacing-1 text-white">Nam maximus molestie mi.</ion-card-title>
+            <p class="card-subtitle text-grey-3">Phasellus rutrum iaculis arcu, at sodales tellus mattis vel.</p>
+          </div>
+        </ion-row>
+      </ion-card>
+
+
+      <ion-card class="bdra-5 black-opct">
+        <ion-row class="wrapper-item-line">
+          <div class="left-time-flex text-center stroke-right stroke-1 stroke-black-opct pdt-20 pdb-20" col-3>
+            <p class="day fs-24 fw-600 stroke-1 stroke stroke-white text-white">3</p>
+            <p class="time">
+              <span class="fw-400 block text-grey-3 uppercase">Nov</span>
+              <b class="fs-12 text-grey-3">5:03 am</b>
+            </p>
+          </div>
+
+          <div class="right-content pd-15 pdr-10" col-9>
+            <ion-card-title class="fs-18 fw-600 spacing-1 text-white">Largelyresponsible for bringing the music to a mass audience.</ion-card-title>
+            <p class="mgb-15 text-grey-3">The most popular industrial group ever, and largelyresponsible.</p>
+          </div>
+        </ion-row>
+      </ion-card>
+
+    </div>
+</div>

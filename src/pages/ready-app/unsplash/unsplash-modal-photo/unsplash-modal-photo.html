@@ -1,0 +1,32 @@
+<div fullscreen fullscreen-no-pdt>
+	<div class="wrapper-view-img">
+		<div class="view-img-detail">
+			<img [src]="data.path" alt="">
+			<div class="btn-wrapper">
+				<button ion-button icon-only small outline class="text-white button-circle mgr-10 mgt-15 stroke stroke-1 stroke-white icon-close" (click)="dismiss()">
+					<ion-icon class="" name="ios-close"></ion-icon>
+				</button>
+
+				<button ion-button icon-only small outline class="text-white button-circle mgr-10 mgt-15 stroke stroke-1 stroke-white icon-heart" (click)="unsplashService.doFavorite(data)">
+					<ion-icon class="fs-16" name="md-heart-outline" *ngIf="!data.isFavorite"></ion-icon>
+					<ion-icon class="fs-16" name="md-heart" *ngIf="data.isFavorite"></ion-icon>
+				</button>
+
+		         <button ion-button icon-only small outline class="text-white button-circle mgr-10 mgt-15 stroke stroke-1 stroke-white icon-heart" (click)="unsplashService.doShare(data)">
+					<ion-icon class="fs-16" name="md-share"></ion-icon>
+				</button>
+
+				<button ion-button icon-only small outline class="text-white button-circle mgr-10 mgt-15 stroke stroke-1 stroke-white icon-heart" (click)="unsplashService.doOpen(data)">
+					<ion-icon class="fs-16" name="md-open"></ion-icon>
+				</button>
+
+				<button ion-button icon-only small outline class="text-white button-circle mgr-10 mgt-15 stroke stroke-1 stroke-white icon-download" (click)="unsplashService.doDownload(data)">
+					<ion-icon class="fs-16" name="md-download" ></ion-icon>
+				</button>
+			</div>
+		    <h5 class="title" [innerHTML]="data.title"></h5>
+		</div>
+	</div>
+</div>
+
+

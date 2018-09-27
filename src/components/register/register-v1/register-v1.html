@@ -1,0 +1,53 @@
+<div class="signup-1 white">
+  <button ion-button clear icon-only small color="dark" class="mgl-0 mgt-15 pdl-5 pdr-5 shadow-3 fs-22 black text-white bdra-0 btn-back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="ios-arrow-round-back"></ion-icon>
+  </button>
+
+  <div col-9 padding class="wrapper-page mg-auto mgt-20">
+    <ion-row class="ani-right-to-left">
+      <h3 class="fs-16 fw-600 text-black mgb-20">{{data.txtHead}}</h3>
+    </ion-row>
+    <ion-row class="logo-img mgb-40 ani-right-to-left">
+      <img [src]="data.imgLogo" alt="">
+    </ion-row>
+
+    <div class="ani-bottom-to-top">
+      <ion-list class="mg-0">
+        <ion-item class="fs-13 text-grey-4 stroke-grey-2 line-1 pdl-0">
+          <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="mg-0">
+        <ion-item class="fs-13 text-grey-4 stroke-grey-2 line-1 pdl-0">
+          <ion-input type="text" placeholder="Fullname" [(ngModel)]="fullname"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="mg-0">
+        <ion-item class="fs-13 text-grey-4 stroke-grey-2 line-1 pdl-0">
+          <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="mg-0">
+        <ion-item class="fs-13 text-grey-4 stroke-grey-2 line-1 pdl-0">
+          <ion-input type="number" placeholder="Phone" [(ngModel)]="phone"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="mg-0">
+        <ion-item class="fs-13 text-grey-4 stroke-grey-2 line-1 pdl-0">
+          <ion-input type="text" placeholder="Address" [(ngModel)]="address"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="mg-0">
+        <ion-item class="fs-13 text-grey-4 stroke-grey-2 line-1 pdl-0">
+          <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+    <div class="text-center mgb-50 mgt-40 ani-top-to-bottom">
+      <button ion-button block color="dark" class="mgt-30 bdra-0 text-white spacing-1 shadow-3 pink-vs-red"  (click)="onCallbackEvent('onSignUp')">
+        {{data.btnSignUp}}
+      </button>
+    </div>
+  </div>
+</div>

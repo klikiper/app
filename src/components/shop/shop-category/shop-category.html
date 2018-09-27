@@ -1,0 +1,171 @@
+<div class="white-1">
+  <ion-card class="card-more-content bdra-5">
+    <div [ngClass]="{'active' : (open_more_1 == true)}" class="wrapper">
+        
+      <div class="thumb" (click)="onCallbackEvent('openList')">
+        <img src="assets/img/bg1.jpg"/>
+
+        <ion-card-content class="black-opct text-white">
+          <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-16">Cosmetic</ion-card-title>
+          <span class="info-stt text-white inline-block"><ion-icon name="md-stats"></ion-icon>5 items</span>
+        </ion-card-content>
+
+        <ion-item class="btn-open-more transparent">
+          <ion-label class="text-white"><ion-icon name="md-list"></ion-icon></ion-label>
+          <ion-checkbox [(ngModel)]="open_more_1" class="hidden-checkbox" color="dark"></ion-checkbox>
+        </ion-item>
+      </div>
+        
+      <ion-list class="tree mgb-0">
+        <ion-row>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Drink</ion-label>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Fast food</ion-label>
+            <ion-badge item-end color="dark" class="fs-12 d-purple bdra-0">3 item</ion-badge>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Extra</ion-label>
+          </button>
+        </ion-row>
+      </ion-list>
+
+    </div>
+  </ion-card>
+
+
+  <ion-card class="card-more-content bdra-5">
+    <div [ngClass]="{'active' : (open_more_2 == true)}" class="wrapper">
+        
+      <div class="thumb" (click)="onCallbackEvent('openList')">
+        <img src="assets/img/bg2.jpg"/>
+
+        <ion-card-content class="black-opct text-white">
+          <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-16">Clothes</ion-card-title>
+          <span class="info-stt text-white inline-block"><ion-icon name="md-stats"></ion-icon>5 items</span>
+        </ion-card-content>
+
+        <ion-item class="btn-open-more transparent">
+          <ion-label class="text-white"><ion-icon name="md-list"></ion-icon></ion-label>
+          <ion-checkbox [(ngModel)]="open_more_2" class="hidden-checkbox" color="dark"></ion-checkbox>
+        </ion-item>
+
+      </div>
+        
+      <ion-list class="tree mgb-0">
+        <ion-row>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Drink</ion-label>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Fast food</ion-label>
+            <ion-badge item-end color="dark" class="fs-12 d-purple bdra-0">3 item</ion-badge>
+          </button>
+        </ion-row>
+      </ion-list>
+
+    </div>
+  </ion-card>
+
+
+  <ion-card class="card-more-content bdra-5">
+    <div class="wrapper">
+        
+      <div class="thumb" (click)="onCallbackEvent('openList')">
+        <img src="assets/img/bg4.jpg"/>
+
+        <ion-card-content class="black-opct text-white">
+          <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-16">Footwear</ion-card-title>
+        </ion-card-content>
+      </div>
+
+    </div>
+  </ion-card>
+
+
+  <ion-card class="card-more-content bdra-5">
+    <div [ngClass]="{'active' : (open_more_4 == true)}" class="wrapper">
+        
+      <div class="thumb" (click)="onCallbackEvent('openList')">
+        <img src="assets/img/bg5.jpg"/>
+
+        <ion-card-content class="black-opct text-white">
+          <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-16">Accessories</ion-card-title>
+          <span class="info-stt text-white inline-block"><ion-icon name="md-stats"></ion-icon>5 items</span>
+        </ion-card-content>
+
+        <ion-item class="btn-open-more transparent">
+          <ion-label class="text-white"><ion-icon name="md-list"></ion-icon></ion-label>
+          <ion-checkbox [(ngModel)]="open_more_4" class="hidden-checkbox" color="dark"></ion-checkbox>
+        </ion-item>
+
+      </div>
+        
+      <ion-list class="tree mgb-0">
+        <ion-row>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Drink</ion-label>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Fast food</ion-label>
+            <ion-badge item-end color="dark" class="fs-12 d-purple bdra-0">3 item</ion-badge>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Extra</ion-label>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Cake</ion-label>
+            <ion-badge item-end color="dark" class="fs-12 d-purple bdra-0">2 item</ion-badge>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Test</ion-label>
+            <ion-badge item-end color="dark" class="fs-12 d-purple bdra-0">2 item</ion-badge>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Demo</ion-label>
+          </button>
+        </ion-row>
+      </ion-list>
+
+    </div>
+  </ion-card>
+
+
+  <ion-card class="card-more-content bdra-5">
+    <div [ngClass]="{'active' : (open_more_5 == true)}" class="wrapper">
+        
+      <div class="thumb" (click)="onCallbackEvent('openList')">
+        <img src="assets/img/bg6.jpg"/>
+
+        <ion-card-content class="black-opct text-white">
+          <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-16">Other</ion-card-title>
+          <span class="info-stt text-white inline-block"><ion-icon name="md-stats"></ion-icon>5 items</span>
+        </ion-card-content>
+
+        <ion-item class="btn-open-more transparent">
+          <ion-label class="text-white"><ion-icon name="md-list"></ion-icon></ion-label>
+          <ion-checkbox [(ngModel)]="open_more_5" class="hidden-checkbox" color="dark"></ion-checkbox>
+        </ion-item>
+
+      </div>
+        
+      <ion-list class="tree mgb-0">
+        <ion-row>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Drink</ion-label>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Fast food</ion-label>
+            <ion-badge item-end color="dark" class="fs-12 d-purple bdra-0">3 item</ion-badge>
+          </button>
+          <button ion-item class="fs-14" (click)="onCallbackEvent('openList')">
+            <ion-label class="text-grey-5">Extra</ion-label>
+          </button>
+        </ion-row>
+      </ion-list>
+
+    </div>
+  </ion-card>
+
+</div>

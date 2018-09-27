@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button class="text-black mgl-10 pd-5 fs-32" (click)="dismiss()">
+        <ion-icon name="ios-arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="inline-block">Koodinh</ion-title>
+    <ion-buttons end>
+      <button ion-button class="mgr-10 text-grey-3">
+        <ion-icon name="ios-information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="white-1" padding>
+  <chat-conversation [data]="data" [events]="events"></chat-conversation>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="white-2 pd-0">
+    <ion-buttons start class="">
+      <button ion-button clear class="text-grey-5 bdra-0 button-large pd-10 mg-0">
+        <ion-icon name="md-attach" class="fs-20"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-list class="mgb-0 mgl-5">
+      <ion-item class="text-grey-5 transparent fs-13 pdl-0">
+        <ion-input type="text" placeholder="Opacity dark"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-buttons end class="mg-0">
+      <button ion-button clear class="text-grey-5 mgl-5 bdra-0 button-large pd-10">
+        <ion-icon name="md-happy" class="fs-20"></ion-icon>
+      </button>
+      <button ion-button class="lama-vs-coban text-white mgr-0 bdra-0 button-large pd-15">
+        <ion-icon name="md-send" class="fs-26"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

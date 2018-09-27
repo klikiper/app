@@ -1,0 +1,169 @@
+<div>
+	
+	<div class="wrapper-slide">
+		<h5 padding>Basic slide</h5>
+		<ion-slides autoplay="2500" loop="true" speed="500" pager="true" class="height-auto" #slide1>
+			<ion-slide>
+			    <img src="assets/img/bg17.jpg" alt="">
+			    <div class="slogan black-opct">
+			    	<div padding class="wrapper-slogan">
+				    	<h3 class="title text-white fs-30 fw-600">Lorem Ipsum</h3>
+				    	<p class="text-white fs-12">Lorem Ipsum is simply dummy text of the printing</p>
+				    </div>
+			    </div>
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg18.jpg" alt="">
+			    <div class="slogan black-opct">
+			    	<div padding class="wrapper-slogan">
+				    	<h3 class="title text-white fs-30 fw-600">Lorem Ipsum</h3>
+				    	<p class="text-white fs-12">Lorem Ipsum is simply dummy text of the printing</p>
+				    </div>
+			    </div>
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg19.jpg" alt="">
+			    <div class="slogan black-opct">
+			    	<div padding class="wrapper-slogan">
+				    	<h3 class="title text-white fs-30 fw-600">Lorem Ipsum</h3>
+				    	<p class="text-white fs-12">Lorem Ipsum is simply dummy text of the printing</p>
+				    </div>
+			    </div>
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+	<div class="wrapper-slide">
+		<h5 padding>Free mode</h5>
+		<ion-slides slidesPerView="2" autoplay="2500" loop="true" speed="500" pager="true" paginationType="progress" class="height-auto" #slide2>
+			<ion-slide>
+			    <img src="assets/img/bg17.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg18.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg19.jpg" alt="">
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+	<div class="wrapper-slide">
+		<h5 padding>Pagination button</h5>
+		<div class="wrapper-slide-pagination">
+			<ion-slides autoplay="2500" loop="true" speed="500" pager="false" class="height-auto" #slide3>
+				<ion-slide>
+				    <img src="assets/img/bg17.jpg" alt="">
+				    <div class="slogan black-opct">
+				    	<div padding class="text-left wrapper-slogan pdl-40">
+					    	<h3 class="title text-white fs-30 fw-600">Lorem Ipsum</h3>
+					    	<p class="text-white fs-12 pdr-40">Lorem Ipsum is simply dummy text of the printing</p>
+					    </div>
+				    </div>
+				</ion-slide>
+
+				<ion-slide>
+				    <img src="assets/img/bg18.jpg" alt="">
+				    <div class="slogan black-opct">
+				    	<div padding class="text-left wrapper-slogan pdl-40">
+					    	<h3 class="title text-white fs-30 fw-600">Lorem Ipsum</h3>
+					    	<p class="text-white fs-12 pdr-40">Lorem Ipsum is simply dummy text of the printing</p>
+					    </div>
+				    </div>
+				</ion-slide>
+
+				<ion-slide>
+				    <img src="assets/img/bg19.jpg" alt="">
+				    <div class="slogan black-opct">
+				    	<div padding class="text-left wrapper-slogan pdl-40">
+					    	<h3 class="title text-white fs-30 fw-600">Lorem Ipsum</h3>
+					    	<p class="text-white fs-12 pdr-40">Lorem Ipsum is simply dummy text of the printing</p>
+					    </div>
+				    </div>
+				</ion-slide>
+			</ion-slides>
+			<div class="btn-pagination">
+				<button ion-button clear class="button-circle text-white pull-right" (click)="slide_next()">
+					<ion-icon class="fs-26" name="ios-arrow-dropright"></ion-icon>
+				</button>
+				<button ion-button clear class="button-circle text-white pull-left" (click)="slide_prev()">
+					<ion-icon class="fs-26" name="ios-arrow-dropleft"></ion-icon>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper-slide">
+		<h5 padding>Effect fade</h5>
+		<ion-slides autoplay="1500" loop="true" effect="fade" speed="500" pager="true" class="height-auto" #slide4>
+			<ion-slide>
+			    <img src="assets/img/bg17.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg18.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg19.jpg" alt="">
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+	<div class="wrapper-slide">
+		<h5 padding>Effect cube</h5>
+		<ion-slides autoplay="1500" loop="true" effect="cube" speed="500" pager="true" class="height-auto" #slide5>
+			<ion-slide>
+			    <img src="assets/img/bg17.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg18.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg19.jpg" alt="">
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+	<div class="wrapper-slide">
+		<h5 padding>Effect coverflow</h5>
+		<ion-slides autoplay="1500" loop="true" effect="coverflow" speed="500" pager="true" class="height-auto" #slide6>
+			<ion-slide>
+			    <img src="assets/img/bg17.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg18.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg19.jpg" alt="">
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+	<div class="wrapper-slide">
+		<h5 padding>Effect flip</h5>
+		<ion-slides autoplay="1500" loop="true" effect="flip" speed="500" pager="true" class="height-auto" #slide7>
+			<ion-slide>
+			    <img src="assets/img/bg17.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg18.jpg" alt="">
+			</ion-slide>
+
+			<ion-slide>
+			    <img src="assets/img/bg19.jpg" alt="">
+			</ion-slide>
+		</ion-slides>
+	</div>
+
+
+</div>

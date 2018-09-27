@@ -1,0 +1,49 @@
+<div *ngIf="data!=null">
+  <div class="bg-img">
+    <img [src]="data.imgBg" alt="">
+  </div>
+
+  <div padding class="wrapper-page text-center black-opct-1 {{data.ani}}">
+    <button ion-button outline icon-only small color="dark" class="text-grey-3 stroke-grey-3 stroke-1 button-circle back-page" (click)="onCallbackEvent('onDismiss')">
+      <ion-icon name="ios-close"></ion-icon>
+    </button>
+    
+    <div>
+      <ion-row class="logo-img mgb-30 mgt-20 ani-left-to-right">
+        <img class="mg-auto" [src]="data.imgLogo" alt="">
+        <p class="text-grey-3 mgt-0 pdl-15 pdr-15">{{data.txtHead}}</p>
+      </ion-row>
+      <ion-list class="ani-bottom-to-top">
+        <ion-item class="text-white white-opct bdra-20">
+          <ion-input type="text" placeholder="{{data.txtUserName}}" [(ngModel)]="username"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list class="ani-bottom-to-top">
+        <ion-item class="text-white white-opct bdra-20">
+          <ion-input type="password" placeholder="{{data.txtPassword}}" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      
+      <button ion-button block outline round color="light" class="mgt-20 stroke-2 stroke-white text-white uppercase fw-600 spacing-1 ani-bottom-to-top" (click)="onCallbackEvent('onLogin')">{{data.btnLogin}}</button>
+
+      <ion-row>
+        <p class="section text-white fs-13 text-center mgt-40 mgb-20 ani-right-to-left">{{data.txtOr}}</p>
+        <button ion-button block outline round icon-left color="light" class="ani-fade-out stroke-2 stroke-white text-white uppercase fw-600 spacing-1" (click)="onCallbackEvent('onFacebookLogin')">
+          <ion-icon name="logo-facebook"></ion-icon>
+          {{data.btnFacebookLogin}}
+        </button>
+
+        <button ion-button block outline round icon-left color="light" class="ani-bottom-to-top stroke-2 stroke-white text-white uppercase fw-600 spacing-1" (click)="onCallbackEvent('onGoogleLogin')">
+          <ion-icon name="logo-google"></ion-icon>
+          {{data.btnGoogleLogin}}
+        </button>
+      </ion-row>
+      
+      <div class="mgt-30">
+        <button ion-button color="light" clear small class="ani-fade-out mgb--5 pull-left text-grey-3" (click)="onCallbackEvent('onSignUp')">{{data.btnSignUp}}</button>
+
+        <button ion-button color="light" clear small class="ani-fade-out mgb--5 pull-right text-grey-3" (click)="onCallbackEvent('onForgotPassword')">{{data.btnForgotPassword}}</button>
+      </div>
+    </div>
+  </div>
+</div>

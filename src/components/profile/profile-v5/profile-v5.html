@@ -1,0 +1,52 @@
+<div class="white-1 profile-v5" *ngIf="data!=null">
+	<div class="cover">
+		<img [src]="data.user.imgCover" alt="">
+	</div>
+
+	<div padding class="wrapper-profile">
+		<div class="white shadow-2 mgt--70 ani-bottom-to-top">
+			<ion-row class="pdl-10 pdr-10 ani-bottom-to-top">
+				<div class="mgt--20 mgr-10 wrapper-avt pull-left">
+					<img [src]="data.user.imgAvatar" alt="">
+				</div>
+				<div>
+					<h3 class="fw-400 mgt-10 mgb-5">{{data.user.username}}</h3>
+					<p class="text-grey-4 fs-12 mgb-0 mgt-0">{{data.user.job}}</p>
+				</div>
+			</ion-row>
+			<ion-row class="spacing-1 pdb-10 mgt-15 ani-bottom-to-top">
+		  		<ion-col class="text-center">
+					<p class="text-grey-4 fs-20 mgb-0 mgt-0">{{data.user.likeCount}}</p>
+					<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtLikes}}</p>
+				</ion-col>
+				<ion-col class="text-center">
+					<p class="text-grey-4 fs-20 mgb-0 mgt-0">{{data.user.followerCount}}</p>
+					<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollower}}</p>
+				</ion-col>
+				<ion-col class="text-center">
+					<p class="text-grey-4 fs-20 mgb-0 mgt-0">{{data.user.followingCount}}</p>
+					<p class="fs-13 text-grey-3 mgt-0">{{data.label.txtFollowing}}</p>
+				</ion-col>
+			</ion-row>
+		</div>
+
+		<div class="white shadow-2 mgt-20 mgb-10 pdl-5 pdr-5 ani-bottom-to-top">
+			<ion-row class="pdt-10 ani-bottom-to-top">
+				<ion-col col-7>
+					<h5 class="mgt-5 text-grey-4 fs-14">{{data.label.txtMyCollection}}</h5>
+				</ion-col>
+			</ion-row>
+			
+			<ion-row>
+				<ion-col col-6 class="ani-bottom-to-top" *ngFor="let item of data.collections">
+					<div class="wrapper-item">
+						<img [src]="item.path" alt="">
+					</div>
+					<p class="fs-16 fw-500 mgt-5 mgb-5">{{item.name}}</p>
+					<p class="fs-13 mgt-0 text-grey-3">{{item.itemsCount}} {{data.label.txtItems}}</p>
+				</ion-col>
+				
+			</ion-row>
+		</div>
+	</div>
+</div>

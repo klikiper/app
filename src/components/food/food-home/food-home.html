@@ -1,0 +1,306 @@
+
+<div class="white">
+  <div class="wrapper-slide">
+    <ion-slides autoplay="2500" loop="true" speed="500" pager="true" class="height-auto" #slide1>
+      <ion-slide (click)="onCallbackEvent('openList')">
+          <img src="assets/img/foo3.jpg" alt="">
+          <div class="slogan">
+            <div padding class="wrapper-slogan pdr-50 white-opct text-left">
+              <h3 class="title text-white spacing-2 fs-30 fw-600 mg-0 uppercase">-50%</h3>
+              <h3 class="title text-white spacing-2 fs-16 fw-600 mg-0 uppercase">Christmas Day</h3>
+            </div>
+          </div>
+      </ion-slide>
+
+      <ion-slide (click)="onCallbackEvent('openList')">
+          <img src="assets/img/foo4.jpg" alt="">
+          <div class="slogan">
+            <div padding class="wrapper-slogan pdr-50 white-opct text-left">
+              <h3 class="title text-white fs-20 spacing-2 fw-600 mg-0 uppercase">Hot Collection</h3>
+              <h4 class="fs-14 uppercase text-white spacing-2 mg-0 uppercase">simply dummy</h4>
+            </div>
+          </div>
+      </ion-slide>
+
+      <ion-slide (click)="onCallbackEvent('openList')">
+          <img src="assets/img/foo5.jpg" alt="">
+          <div class="slogan">
+            <div padding class="wrapper-slogan pdr-50 white-opct text-left">
+              <h3 class="title text-white fs-14 spacing-2 fw-600 uppercase mg-0">of the</h3>
+              <h3 class="title text-white fs-20 spacing-2 fw-600 uppercase mg-0">printing</h3>
+            </div>
+          </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+
+
+  <ion-row class="cat-slide mgt--15 mgb--30 mgr--30">
+    <ion-slides slidesPerView="4" autoplay="2500" loop="true" speed="500" pager="false" class="height-auto">
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openList')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 lot-vs-phan full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo1.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openList')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 hong-vs-lanon full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo2.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openList')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 lama-vs-coban full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo3.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openList')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 pink-vs-red full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo4.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openList')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 pink-vs-yellow full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo7.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 tim-vs-datroi full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo8.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 white full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo9.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0">Name cat</h3>
+        </div>
+      </ion-slide>
+
+      <ion-slide class="pdl-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="wrap-cat pd-10 shadow-1 bdra-5 black full-width text-center">
+          <div class="thumb-cat mg-auto mgt-5 circle ovfl-hidden">
+            <img src="assets/img/foo10.jpg" alt="">
+          </div>
+          <h3 class="name-cat fs-11 mgt-10 mgb-0 text-white">Name cat</h3>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+
+
+
+
+  <div class="promotion mg-15">
+    <div class="main-promotion cyan pd-15 bdra-5 mgr-15 shadow-1" (click)="onCallbackEvent('openDetail')">
+      <div class="slogan-promo pull-left text-left">
+        <h3 class="fs-14 mg-0 spacing-1 text-white">Fast for today</h3>
+        <p class="fs-11 mg-0 text-white">- Nine Inch Nails Live</p>
+      </div>
+      <div class="wrap-thumb-promo pull-right text-right">
+        <div class="thumb-promo mgr--15 stroke stroke-l-blue stroke-3 circle">
+          <img src="assets/img/foo1.jpg">
+        </div>
+        <div class="thumb-promo stroke stroke-yellow stroke-3 circle">
+          <img src="assets/img/foo2.jpg">
+        </div>
+      </div>
+      <div class="bg-promo">
+        <img src="assets/img/bg-material.jpg">
+      </div>
+    </div>
+    <div class="wrap-decor">
+      <div class="yellow decor-promo"></div>
+      <div class="cyan decor-promo-2"></div>
+    </div>
+  </div>
+
+
+
+  <div padding class="mg-0 pdt-10 mgt-20">
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt1.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 ovfl-hidden thumb-view">
+          <img src="assets/img/foo1.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt2.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 thumb-view">
+          <img src="assets/img/foo2.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt3.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 thumb-view">
+          <img src="assets/img/foo3.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt4.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 thumb-view">
+          <img src="assets/img/foo4.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt5.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 thumb-view">
+          <img src="assets/img/foo5.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt6.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 thumb-view">
+          <img src="assets/img/foo7.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="full-width mg-0 shadow-0 featured_item mgb-25" (click)="onCallbackEvent('openDetail')">
+      <ion-item class="pd-0">
+        <ion-avatar item-start class="mg-0 mgr-10">
+          <img src="assets/img/avt7.jpg">
+        </ion-avatar>
+        <h2 class="fs-12 fw-500 text-grey-4">Marty McFly</h2>
+      </ion-item>
+
+      <ion-card-content class="pd-0">
+        <ion-col col-7 class="pd-0 txt-item">
+          <div class="">
+            <h3 class="fs-14 spacing-1 fw-600 mgt-10 text-black">Nine Inch Nails Live</h3>
+            <p class="fw-600 text-grey-4 fs-11">32.00 $</p>
+          </div>
+          <p class="fs-10 text-grey-4 spacing-1 mgb-5">November 5, 1955</p>
+        </ion-col>
+        <ion-col col-5 class="pd-0 bdra-3 thumb-view">
+          <img src="assets/img/foo8.jpg"/>
+        </ion-col>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</div>

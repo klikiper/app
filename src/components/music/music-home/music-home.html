@@ -1,0 +1,134 @@
+
+
+<div padding>
+  <ion-toolbar no-border-top class="mgt--10 mgb-10">
+    <ion-segment [(ngModel)]="section" class="segment-line-deviation text-white stroke-white">
+      <ion-segment-button class="fs-14 pdl-0 pdr-10 text-left" value="popular">
+        Popular
+      </ion-segment-button>
+      <ion-segment-button class="fs-14 pdl-0 pdr-10 text-left" value="trend">
+        Trend
+      </ion-segment-button>
+      <ion-segment-button class="fs-14 pdl-0 pdr-10 text-left" value="chart">
+        Chart
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <h4 class="fs-20 fw-600 text-white mgb-0 spacing-1">New</h4>
+  <ion-row class="mgl--10 mgr--70">
+    <ion-slides slidesPerView="3" autoplay="2500" loop="true" speed="500" pager="false" class="height-auto">
+      <ion-slide class="pd-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="thumb-album shadow-2">
+          <img src="assets/img/demo1.jpg" alt="">
+          <div class="white decor"><span class="inline-block stroke-white"></span></div>
+        </div>
+        <div class="text-left mgt-5">
+          <h5 class="text-white fs-13 mg-0">Name Album</h5>
+          <p class="text-grey-1 fs-11 mg-0">description in here</p>
+        </div>
+      </ion-slide>
+      <ion-slide class="pd-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="thumb-album shadow-2">
+          <img src="assets/img/demo2.jpg" alt="">
+          <div class="white decor"><span class="inline-block stroke-white"></span></div>
+        </div>
+        <div class="text-left mgt-5">
+          <h5 class="text-white fs-13 mg-0">Name Album</h5>
+          <p class="text-grey-1 fs-11 mg-0">description in here</p>
+        </div>
+      </ion-slide>
+      <ion-slide class="pd-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="thumb-album shadow-2">
+          <img src="assets/img/demo3.jpg" alt="">
+          <div class="white decor"><span class="inline-block stroke-white"></span></div>
+        </div>
+        <div class="text-left mgt-5">
+          <h5 class="text-white fs-13 mg-0">Name Album</h5>
+          <p class="text-grey-1 fs-11 mg-0">description in here</p>
+        </div>
+      </ion-slide>
+      <ion-slide class="pd-10" (click)="onCallbackEvent('openPlayer')">
+        <div class="thumb-album shadow-2">
+          <img src="assets/img/demo5.jpg" alt="">
+          <div class="white decor"><span class="inline-block stroke-white"></span></div>
+        </div>
+        <div class="text-left mgt-5">
+          <h5 class="text-white fs-13 mg-0">Name Album</h5>
+          <p class="text-grey-1 fs-11 mg-0">description in here</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+
+
+  <h4 class="fs-20 fw-600 text-white mgb-10 mgt-20 spacing-1">Guess you like</h4>
+  <ion-list no-lines class="lst-no-background">
+    <ion-item class="pdl-0" (click)="onCallbackEvent('openPlayer')">
+      <ion-thumbnail item-start class="shadow-2">
+        <img src="assets/img/demo1.jpg">
+      </ion-thumbnail>
+      <h2 class="text-white fs-15">My Neighbor Totoro</h2>
+      <p class="text-grey-1 fs-12">Hayao Miyazaki • 1988</p>
+      <button ion-button small item-end class="white-opct text-white button-circle">
+        <ion-icon class="fs-18" name="ios-play"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item class="pdl-0" (click)="onCallbackEvent('openPlayer')">
+      <ion-thumbnail item-start class="shadow-2">
+        <img src="assets/img/demo2.jpg">
+      </ion-thumbnail>
+      <h2 class="text-white fs-15">Raiders of the Lost Ark</h2>
+      <p class="text-grey-1 fs-12">Steven Spielberg • 1981</p>
+      <button ion-button small item-end class="white-opct text-white button-circle">
+        <ion-icon class="fs-18" name="ios-play"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item class="pdl-0" (click)="onCallbackEvent('openPlayer')">
+      <ion-thumbnail item-start class="shadow-2">
+        <img src="assets/img/demo3.jpg">
+      </ion-thumbnail>
+      <h2 class="text-white fs-15">Ghostbusters</h2>
+      <p class="text-grey-1 fs-12">Ivan Reitman • 1984</p>
+      <button ion-button small item-end class="white-opct text-white button-circle">
+        <ion-icon class="fs-18" name="ios-play"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item class="pdl-0" (click)="onCallbackEvent('openPlayer')">
+      <ion-thumbnail item-start class="shadow-2">
+        <img src="assets/img/demo4.jpg">
+      </ion-thumbnail>
+      <h2 class="text-white fs-15">Batman</h2>
+      <p class="text-grey-1 fs-12">Tim Burton • 1988</p>
+      <button ion-button small item-end class="white-opct text-white button-circle">
+        <ion-icon class="fs-18" name="ios-play"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item class="pdl-0" (click)="onCallbackEvent('openPlayer')">
+      <ion-thumbnail item-start class="shadow-2">
+        <img src="assets/img/demo5.jpg">
+      </ion-thumbnail>
+      <h2 class="text-white fs-15">My Neighbor Totoro</h2>
+      <p class="text-grey-1 fs-12">Hayao Miyazaki • 1988</p>
+      <button ion-button small item-end class="white-opct text-white button-circle">
+        <ion-icon class="fs-18" name="ios-play"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item class="pdl-0" (click)="onCallbackEvent('openPlayer')">
+      <ion-thumbnail item-start class="shadow-2">
+        <img src="assets/img/demo6.jpg">
+      </ion-thumbnail>
+      <h2 class="text-white fs-15">Raiders of the Lost Ark</h2>
+      <p class="text-grey-1 fs-12">Steven Spielberg • 1981</p>
+      <button ion-button small item-end class="white-opct text-white button-circle">
+        <ion-icon class="fs-18" name="ios-play"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+</div>

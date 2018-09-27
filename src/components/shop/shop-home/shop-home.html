@@ -1,0 +1,218 @@
+
+<div class="white-1">
+  <div class="wrapper-slide">
+    <ion-slides autoplay="2500" loop="true" speed="500" pager="true" class="height-auto" #slide1>
+      <ion-slide (click)="onCallbackEvent('openList')">
+          <img src="assets/img/bg17.jpg" alt="">
+          <div class="slogan black-opct">
+            <div padding class="wrapper-slogan">
+              <h3 class="title text-white fs-20 fw-600"><strong class="fs-40 fw-600">-50% </strong>Christmas Day</h3>
+              <p class="text-white fs-12">Lorem Ipsum is simply dummy text<br/>of the printing</p>
+            </div>
+          </div>
+      </ion-slide>
+
+      <ion-slide (click)="onCallbackEvent('openList')">
+          <img src="assets/img/bg18.jpg" alt="">
+          <div class="slogan black-opct-1">
+            <div padding class="wrapper-slogan text-left">
+              <h3 class="title text-white fs-30 fw-600 mgb-0">Hot Collection</h3>
+              <h4 class="fs-16 uppercase text-white spacing-2 mgt-0">simply dummy</h4>
+              <p class="text-white fs-12">Lorem Ipsum is simply dummy text of the printing</p>
+            </div>
+          </div>
+      </ion-slide>
+
+      <ion-slide (click)="onCallbackEvent('openList')">
+          <img src="assets/img/bg19.jpg" alt="">
+          <div class="slogan black-opct">
+            <div padding class="wrapper-slogan text-right full-width pdr-40">
+              <h3 class="title text-white fs-40 fw-600">Lorem<br/>Ipsum</h3>
+              <div class="divider white"></div>
+              <p class="text-white fs-12">Lorem Ipsum is simply dummy text<br/>of the printing</p>
+            </div>
+          </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-row class="white pdt-10 pdb-10">
+    <ion-col col-4 class="text-center stroke-1 stroke-right stroke-white-2" (click)="onCallbackEvent('openList')">
+      <ion-icon class="fs-36 text-grey-3" name="ios-clock-outline"></ion-icon>
+      <p class="fw-600 text-grey-5 mgt-5 mgb-0">New Post</p>
+    </ion-col>
+    <ion-col col-4 class="text-center stroke-1 stroke-right stroke-white-2" (click)="onCallbackEvent('openList')">
+      <ion-icon class="fs-36 text-grey-3" name="ios-people-outline"></ion-icon>
+      <p class="fw-600 text-grey-5 mgt-5 mgb-0">Hot Sale</p>
+    </ion-col>
+    <ion-col col-4 class="text-center" (click)="onCallbackEvent('openList')">
+      <ion-icon class="fs-36 text-grey-3" name="ios-ribbon-outline"></ion-icon>
+      <p class="fw-600 text-grey-5 mgt-5 mgb-0">Offer</p>
+    </ion-col>
+  </ion-row>
+  
+  <div class="white mgt-10">
+    <h4 class="text-center fs-16 fw-600 spacing-1 uppercase pdt-30 mgb-0">Categories you care</h4>
+    <p class="text-grey-3 text-center mgt-5">Choose cat you love</p>
+    <ion-row class="mgt-30">
+      <ion-col col-4 class="pd-0 cat-thumb">
+        <ion-card class="card-img-bg bdra-0 mg-0 full-width" (click)="onCallbackEvent('openList')">
+          <img src="assets/img/demo11.jpg"/>
+          <div class="card-title fs-14 fw-600">São Paulo</div>
+          <div class="card-subtitle mgt-5">41 items</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-4 class="pd-0 cat-thumb">
+        <ion-card class="card-img-bg bdra-0 mg-0 full-width" (click)="onCallbackEvent('openList')">
+          <img src="assets/img/demo12.jpg"/>
+          <div class="card-title fs-14 fw-600">São Paulo</div>
+          <div class="card-subtitle mgt-5">41 items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-4 class="pd-0 cat-thumb">
+        <ion-card class="card-img-bg bdra-0 mg-0 full-width" (click)="onCallbackEvent('openList')">
+          <img src="assets/img/demo1.jpg"/>
+          <div class="card-title fs-14 fw-600">São Paulo</div>
+          <div class="card-subtitle mgt-5">41 items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-4 class="pd-0 cat-thumb">
+        <ion-card class="card-img-bg bdra-0 mg-0 full-width" (click)="onCallbackEvent('openList')">
+          <img src="assets/img/demo4.jpg"/>
+          <div class="card-title fs-14 fw-600">São Paulo</div>
+          <div class="card-subtitle mgt-5">41 items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-4 class="pd-0 cat-thumb">
+        <ion-card class="card-img-bg bdra-0 mg-0 full-width" (click)="onCallbackEvent('openList')">
+          <img src="assets/img/demo5.jpg"/>
+          <div class="card-title fs-14 fw-600">São Paulo</div>
+          <div class="card-subtitle mgt-5">41 items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-4 class="pd-0 cat-thumb">
+        <ion-card class="card-img-bg bdra-0 mg-0 full-width" (click)="onCallbackEvent('openList')">
+          <img src="assets/img/demo6.jpg"/>
+          <div class="card-title fs-14 fw-600">São Paulo</div>
+          <div class="card-subtitle mgt-5">41 items</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="mg-0 white-1 pdt-10 mgt-20">
+    <h4 class="text-center mgb-0">Top Sale Week</h4>
+    <p class="text-grey-3 text-center mgt-5 pdl-30 pdr-30">The best selling products of the week, do you like them?</p>
+    <ion-row class="pdr-5 mgt-30 pdb-10">
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo1.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo2.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo3.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo4.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo5.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo6.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo7.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo8.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo9.jpg"/>
+          
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-card class="full-width mg-0 shadow-1 featured_item" (click)="onCallbackEvent('openDetail')">
+          <img src="assets/img/demo10.jpg"/>
+          <ion-card-content class="pd-5">
+            <ion-card-title class="fs-13 fw-600 pd-0">Nine Inch Nails Live</ion-card-title>
+            <p class="fw-600 text-grey-4 fs-10">32.00 $</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</div>

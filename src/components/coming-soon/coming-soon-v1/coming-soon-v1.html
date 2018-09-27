@@ -1,0 +1,26 @@
+<div *ngIf="data!=null" class="white-1">
+	<div class="bg-img">
+		<img src="assets/img/bg2.jpg" alt="">
+	</div>
+	<div class="wrapper-pst black-opct-1">
+		<div class="top-decor">
+			<img src="assets/img/decor_coming.png" alt="">
+		</div>
+		<div class="wrapper-coming">
+			<div class="time-count mgt-50 ani-bottom-to-top">
+				<p class="text-white text-right fs-14 fw-300 spacing-2 ani-right-to-left">Seconds: {{seconds}}</p>
+				<h2 class="text-white fs-50 fw-600 spacing-1 mgt-10">{{days +':'+ hours +':'+ minutes}}</h2>
+			</div>
+			<div>
+
+				<ion-list class="ani-bottom-to-top">
+				<ion-item class="text-white white-opct bdra-20">
+				<ion-input type="email" placeholder="{{data.txtUserName}}" [(ngModel)]="email"></ion-input>
+			</ion-item>
+		</ion-list>
+
+		<button ion-button block outline round color="light" class="mgt-20 stroke-2 stroke-white text-white uppercase fw-600 spacing-1 ani-bottom-to-top" (click)="onCallbackEvent('onLogin')">{{data.txtLogin}}</button>
+	</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,14 @@
+shots-gallery {
+	.wrapper-shots-gallery{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100px;
+		overflow: hidden;
+		img{
+			display: block;
+			min-height: 100%;
+			width: 100%;
+		}
+	}
+}

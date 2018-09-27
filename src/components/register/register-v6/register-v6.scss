@@ -1,0 +1,51 @@
+register-v6 {
+	.bg-img{
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			height: 100%;
+		}
+	}
+	ion-slides{
+		width: 100%;
+		height: 100%;
+		ion-slide{
+			padding: 0;
+		}
+		.swiper-wrapper{
+			align-items: flex-end;
+		}
+	}
+	.wrapper-top-signup{
+		position: relative;
+		z-index: 100;
+	}
+	.wrapper-page{
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.logo-img{
+		img{
+			height: 30px;
+		}
+	}
+	.main-form{
+		.form-2{
+			position: relative;
+			z-index: 100;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+
+<div class="white-1">
+	<ion-card class="card-img-bg-more mg-0 bdra-0 full-width" *ngFor="let item of data">
+	    <img src="{{item.path}}" (click)="onCallbackEvent('onClick',item, $event)" />
+	    <ion-card-header class="text-white">
+	      <button ion-button icon-only small class="button-circle white-opct text-white mgt--5">
+	        <ion-icon name="ios-chatbubbles-outline"></ion-icon>
+	      </button>
+	      <span class="fs-14 fw-400">23 Comments</span>
+	      <button ion-button small icon-left class="white-opct text-white pull-right mgt--5">
+	      	<ion-icon name="md-heart-outline"></ion-icon>130
+	      </button>
+	    </ion-card-header>
+	    <div class="wrapper black-opct" (click)="onCallbackEvent('onClick',item, $event)">
+	      <ion-card-content class="text-white full-width">
+	        <span class="info-stt text-white inline-block">Otc 23, 017</span>
+	        <ion-card-title class="text-white uppercase spacing-1 fw-600 fs-14 text-ellipsis" [innerHTML]="item.title"></ion-card-title>
+	      </ion-card-content>
+	    </div>
+	</ion-card>
+</div>

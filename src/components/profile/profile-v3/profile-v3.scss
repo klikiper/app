@@ -1,0 +1,33 @@
+profile-v3 {
+		.cover{
+			img{
+				display: inherit;
+			}
+		}
+   		.wrapper-avt{
+			width: 90px;
+			height: 95px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			img{
+				height: 100%;
+				max-width: unset;
+			}
+		}
+		.wrapper-show-prd{
+			.thumb-prd{
+				overflow: hidden;
+				height: 85px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img{
+					height: 100%;
+					max-width: unset;
+					min-width: 100%;
+				}
+			}
+		}
+}

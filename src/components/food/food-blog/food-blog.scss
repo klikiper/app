@@ -1,0 +1,42 @@
+food-blog {
+	.food-slide-blog{
+		width: 200%;
+		margin-left: -60%;
+		ion-slide{
+			.wrap-slide-item{
+				position: relative;
+				height: 170px;
+				display: flex;
+				img{
+					height: 100%;
+					width: auto;
+					max-width: unset;
+				}
+			}
+			
+		}
+		.swiper-slide-active{
+			.wrap-slide-item{
+				margin-top: 0px !important;
+				height: 200px;
+			}
+		}
+		.slogan-slide-blog{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+				display: flex;
+				align-items: flex-end;
+				.wrapper-slogan{
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+				}
+		}
+	}
+
+}

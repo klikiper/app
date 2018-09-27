@@ -1,0 +1,53 @@
+
+
+
+  <div class="wrapper-player">
+    <div padding class="info-strong text-center">
+      <img class="shadow-3" src="assets/img/demo1.jpg">
+      <div class="text-center mgt-15">
+        <h3 class="pd-0 text-white mg-0 fw-500">Name strong here</h3>
+        <p class="pd-0 text-white mg-0 fs-12">Koodinh | post at March 6, 2018</p>
+      </div>
+    </div>
+
+    <div class="">
+      <ion-item no-lines class="transparent">
+        <ion-range class="pdr-15" min="0" max="100" [(ngModel)]="saturation" color="white"></ion-range>
+      </ion-item>
+      <div padding class="pdt-0">
+        <span class="pull-left text-white fs-13">00:00</span>
+        <span class="pull-right text-white fs-13">03:00</span>
+      </div>
+    </div>
+    
+    <div padding class="pdb-0">
+      <div class="directional text-center">
+        <button ion-button clear class="button-circle button-large text-white">
+          <ion-icon class="fs-24" name="ios-skip-backward-outline"></ion-icon>
+        </button>
+        <button ion-button clear class="button-circle button-large white shadow-3 text-black">
+          <ion-icon class="fs-24" name="ios-pause"></ion-icon>
+        </button>
+        <button ion-button clear class="button-circle button-large text-white">
+          <ion-icon class="fs-24" name="ios-skip-forward-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="group-btn-more mgt-15">
+        <button ion-button clear icon-only class="button-circle text-white">
+          <ion-icon name="ios-repeat"></ion-icon>
+        </button>
+        <div class="volume">
+          <ion-item no-lines class="transparent">
+            <ion-range [(ngModel)]="volume" min="0" max="100" color="white">
+              <ion-icon range-left class="text-white" name="ios-volume-off"></ion-icon>
+              <ion-icon range-right class="text-white" name="ios-volume-up"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </div>
+        <button ion-button clear icon-only class="button-circle text-white">
+          <ion-icon name="ios-shuffle"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>

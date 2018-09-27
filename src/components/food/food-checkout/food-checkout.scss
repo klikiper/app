@@ -1,0 +1,24 @@
+food-checkout {
+	.pst-button{
+		z-index: 1000;
+		position: fixed;
+		bottom: 50px;
+		right: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.thumb-item{
+		height: 50px;
+		width: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			height: 100%;
+			width: auto;
+			max-width: unset;
+		}
+	}
+}

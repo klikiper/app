@@ -1,0 +1,234 @@
+<div *ngIf="settings!=null">
+
+<ion-split-pane when="md">
+  <ion-menu class="{{settings.skin.main_skin}}" [content]="content" id="menu-material">
+    <ion-content class="{{settings.skin.main_bg}}">
+      <div class="info-user mgb-30 pdt-5 pdb-5 pdb-10">
+        <div class="bg-img"><img src="assets/img/bg-material.jpg" alt=""></div>
+        <div class="wrapper-avt pd-10">
+          <div class="main-avt mg-5 pull-left shadow-1"><img src="assets/img/avt1.jpg" alt=""></div>
+          <div class="sub-avt mg-5 pull-right shadow-1"><img src="assets/img/avt2.jpg" alt=""></div>
+          <div class="sub-avt mg-5 pull-right shadow-1"><img src="assets/img/avt3.jpg" alt=""></div>
+        </div>
+        
+        <div class="mgt-30">
+          <span class="pdt-5 mgl-15 inline-block text-white">koodinh@gmail.com</span>
+          <button ion-button clear small class="text-left text-grey-1 pull-right">
+            <ion-icon name="md-arrow-dropdown"></ion-icon>
+          </button>
+        </div>
+      </div>
+
+      <ion-list no-lines class="lst-menu">
+        <span *ngFor="let item of pages" class="{{settings.skin.text_1}}">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            {{item.title}}
+          </ion-item>
+          <button menuClose="menu-material" ion-item icon-left *ngFor="let sub of item.group" class="transparent fw-500" (click)="openPage(sub)">
+            <ion-icon name="{{sub.icon}}" item-left></ion-icon>
+            {{sub.title}}
+          </button>
+        </span>
+
+        <span class="{{settings.skin.text_1}}">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            Level Menu
+          </ion-item>
+          <ion-list class="tree mgb-0">
+            <ion-item icon-left class="btn-open-more transparent">
+              <ion-label ion-left><ion-icon class="mgr-15 pdr-5 text-center" name="ios-stats"></ion-icon>Level Collapse</ion-label>
+              <ion-checkbox [(ngModel)]="show_drop" class="hidden-checkbox" color="dark"></ion-checkbox>
+            </ion-item>
+
+            <ion-row class="dropdown" [ngClass]="{'active' : (show_drop == true)}">
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Drink
+              </button>
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Fast food
+                <ion-badge item-end color="dark" class="fs-12 white-opct {{settings.skin.text_1}} bdra-5">3</ion-badge>
+              </button>
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Extra
+              </button>
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Cake
+                <ion-badge item-end color="dark" class="fs-12 white-opct {{settings.skin.text_1}} bdra-5">2</ion-badge>
+              </button>
+            </ion-row>
+          </ion-list>
+        </span>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-menu class="" [content]="content" id="menu-basic">
+    <ion-header class="{{settings.skin.main_skin}}">
+      <ion-toolbar>
+        <ion-title>
+          <img class="logo-brand light-brand" src="assets/img/chimera_w.png" alt="">
+          <img class="logo-brand dark-brand" src="assets/img/chimera_b.png" alt="">
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="{{settings.skin.main_bg}}">
+      <ion-list no-lines class="lst-menu">
+        <span *ngFor="let item of pages" class="{{settings.skin.text_1}}">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            {{item.title}}
+          </ion-item>
+          <ion-item-group submenu>
+            <button submenu-item menuClose ion-item icon-left *ngFor="let sub of item.group" class="transparent" (click)="openPage(sub)">
+              <ion-icon name={{sub.icon}} item-left></ion-icon>
+              {{sub.title}}
+            </button>
+          </ion-item-group>
+        </span>
+
+
+        <span class="{{settings.skin.text_1}}">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            Level Menu
+          </ion-item>
+          <ion-list class="tree mgb-0">
+            <ion-item icon-left class="btn-open-more transparent">
+              <ion-label ion-left class="text-white-1"><ion-icon class="mgr-15 pdr-5 text-center" name="ios-stats"></ion-icon>Level Collapse</ion-label>
+              <ion-checkbox [(ngModel)]="show_drop" class="hidden-checkbox" color="dark"></ion-checkbox>
+            </ion-item>
+            <ion-list class="tree mgb-0">
+              <ion-item icon-left class="btn-open-more transparent">
+                <ion-label ion-left><ion-icon class="mgr-15 pdr-5 text-center" name="ios-stats"></ion-icon>Level Collapse</ion-label>
+                <ion-checkbox [(ngModel)]="show_drop" class="hidden-checkbox" color="dark"></ion-checkbox>
+              </ion-item>
+
+              <ion-row class="dropdown" [ngClass]="{'active' : (show_drop == true)}">
+                <button ion-item small class="transparent fs-14">
+                  <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                  Drink
+                </button>
+                <button ion-item small class="transparent fs-14">
+                  <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                  Fast food
+                  <ion-badge item-end color="dark" class="fs-12 white-opct {{settings.skin.text_1}} bdra-5">3</ion-badge>
+                </button>
+                <button ion-item small class="transparent fs-14">
+                  <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                  Extra
+                </button>
+                <button ion-item small class="transparent fs-14">
+                  <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                  Cake
+                  <ion-badge item-end color="dark" class="fs-12 white-opct {{settings.skin.text_1}} bdra-5">2</ion-badge>
+                </button>
+              </ion-row>
+            </ion-list>
+          </ion-list>
+        </span>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-menu class="{{settings.skin.main_skin}}" [content]="content" id="menu-avatar">
+
+    <ion-content class="{{settings.skin.main_bg}}">
+      
+      <div class="info-user mgb-30 pdt-50 pdb-20 black-opct">
+        <button ion-button clear only-icon small class="user-setting text-grey-1"><ion-icon name="ios-settings"></ion-icon></button>
+        <div class="bg-img"><img src="assets/img/bg9.jpg" alt=""></div>
+        <div class="wrapper-avt mgl-15 mgr-10">
+          <img src="assets/img/avt1.jpg" alt="">
+        </div>
+        <div class="main-info">
+          <h2 class="user-name fs-20 fw-600 mg-0 text-white">Koodinh</h2>
+          <button ion-button clear small class="pd-0 mg-0 text-left text-grey-1">koodinh@gmail.com</button>
+        </div>
+      </div>
+
+      <ion-list no-lines class="lst-menu">
+        <span *ngFor="let item of pages" class="{{settings.skin.text_1}}">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            {{item.title}}
+          </ion-item>
+
+          <button menuClose="menu-avatar" ion-item icon-left *ngFor="let sub of item.group" class="transparent" (click)="openPage(sub)">
+            <ion-icon name="{{sub.icon}}" item-left></ion-icon>
+            {{sub.title}}
+          </button>
+        </span>
+
+        <span class="{{settings.skin.text_1}}">
+          <ion-item class="transparent uppercase mgt-20 fs-14 fw-400 spacing-1">
+            Level Menu
+          </ion-item>
+          <ion-list class="tree mgb-0">
+            <ion-item icon-left class="btn-open-more transparent">
+              <ion-label ion-left><ion-icon class="mgr-15 pdr-5 text-center" name="ios-stats"></ion-icon>Level Collapse</ion-label>
+              <ion-checkbox [(ngModel)]="show_drop" class="hidden-checkbox" color="dark"></ion-checkbox>
+            </ion-item>
+
+            <ion-row class="dropdown" [ngClass]="{'active' : (show_drop == true)}">
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Drink
+              </button>
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Fast food
+                <ion-badge item-end color="dark" class="fs-12 white-opct {{settings.skin.text_1}} bdra-5">3</ion-badge>
+              </button>
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Extra
+              </button>
+              <button ion-item small class="transparent fs-14">
+                <ion-icon name="md-radio-button-off" class="fs-8 text-center pdr-5 mgl-35 mgr-5"></ion-icon>
+                Cake
+                <ion-badge item-end color="dark" class="fs-12 white-opct {{settings.skin.text_1}} bdra-5">2</ion-badge>
+              </button>
+            </ion-row>
+          </ion-list>
+        </span>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+
+  <ion-menu class="{{settings.skin.main_skin}}" small menu-small-width [content]="content" id="menu-icon-only">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          <h1 class="text-center {{settings.skin.text_1}}">C</h1>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="{{settings.skin.main_bg}}">
+      
+      <div class="user-avt">
+        <img src="assets/img/avt2.jpg" alt="">
+      </div>
+
+      <ion-list no-lines class="lst-menu">
+        <span *ngFor="let item of pages" class="{{settings.skin.text_1}}">
+          <button menuClose="menu-material" ion-button block icon-only *ngFor="let sub of item.group" class="transparent" (click)="openPage(sub)">
+            <ion-icon name="{{sub.icon}}" class="fs-20" item-left></ion-icon>
+          </button>
+        </span>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-nav [root]="rootPage" #content main swipeBackEnabled="true"></ion-nav>
+</ion-split-pane>
+</div>
